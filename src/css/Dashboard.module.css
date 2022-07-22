@@ -1,0 +1,604 @@
+.vaultDiv {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+}
+.arrowChevronDuoRight {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.createVaultB {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  color: #fff;
+}
+.frameDiv {
+  position: absolute;
+  top: 136px;
+  left: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+.frameDiv > * + * {
+  margin-left: 8px;
+}
+.icon24cursor {
+  position: absolute;
+  top: 352px;
+  left: 560px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: none;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 184px;
+  left: 0;
+  background-color: #0e0e10;
+  border-top: 0 solid #050505;
+  border-right: 1px solid #050505;
+  border-bottom: 0 solid #050505;
+  border-left: 0 solid #050505;
+  box-sizing: border-box;
+  width: 1440px;
+  height: 1322px;
+}
+.ellipseIcon {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  flex-shrink: 0;
+}
+.frameDiv2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv2 > * + * {
+  margin-left: 16px;
+}
+.frameDiv1 {
+  position: absolute;
+  top: 191px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv1 > * + * {
+  margin-top: 16px;
+}
+.squareEditOutlineIcon,
+.trashCanOutlineIcon {
+  position: absolute;
+  top: 16px;
+  left: 528px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.squareEditOutlineIcon {
+  left: 568px;
+}
+.colorsLayerStyles {
+  position: relative;
+  line-height: 16px;
+  display: inline-block;
+}
+.frameDiv71 {
+  position: absolute;
+  top: 16px;
+  left: 135px;
+  border-radius: 16px;
+  background-color: #2d2d31;
+  display: flex;
+  flex-direction: row;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.bgIcon {
+  position: relative;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.frameDiv72 {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  border-radius: 16px;
+  background-color: #2d2d31;
+  display: flex;
+  flex-direction: row;
+  padding: 0 8px 0 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.frameDiv72 > * + * {
+  margin-left: 8px;
+}
+.ellipseIcon4964 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.frameDiv73 {
+  position: absolute;
+  top: 56px;
+  left: 452px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: right;
+  font-size: 16px;
+}
+.frameDiv73 > * + * {
+  margin-left: 8px;
+}
+.groupIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv74 {
+  position: absolute;
+  top: 56px;
+  left: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+.frameDiv74 > * + * {
+  margin-left: 8px;
+}
+.frameDiv70 {
+  position: absolute;
+  top: 224px;
+  left: 416px;
+  border-radius: 8px;
+  background-color: #202023;
+  width: 608px;
+  height: 96px;
+  font-size: 12px;
+  color: #fff;
+}
+.selectActionDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.groupDiv {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 87px;
+  height: 24px;
+}
+.titleDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  font-weight: 900;
+  display: inline-block;
+}
+.arrowLeftIcon,
+.groupDiv1 {
+  position: relative;
+  width: 77px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.arrowLeftIcon {
+  width: 24px;
+  overflow: hidden;
+  display: none;
+}
+.frameDiv76 {
+  position: absolute;
+  top: 72px;
+  left: 24px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.titleB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  display: inline-block;
+}
+.groupDiv2 {
+  position: relative;
+  width: 86px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv77 {
+  position: absolute;
+  top: 72px;
+  left: 219px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.groupDiv3 {
+  position: relative;
+  width: 74px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv78 {
+  position: absolute;
+  top: 152px;
+  left: 219px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.groupDiv4 {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv79 {
+  position: absolute;
+  top: 152px;
+  left: 24px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.groupDiv5 {
+  position: relative;
+  width: 91px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv80 {
+  position: absolute;
+  top: 232px;
+  left: 24px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.groupDiv6 {
+  position: relative;
+  width: 108px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv81 {
+  position: absolute;
+  top: 72px;
+  left: 414px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.groupDiv7 {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv82 {
+  position: absolute;
+  top: 152px;
+  left: 414px;
+  border-radius: 8px;
+  background-color: #2d2d31;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.closeIcon {
+  position: absolute;
+  top: 24px;
+  left: 560px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.frameDiv75 {
+  position: absolute;
+  top: 352px;
+  left: 416px;
+  border-radius: 4px;
+  background-color: #202023;
+  width: 608px;
+  height: 312px;
+  font-size: 14px;
+  color: #fff;
+}
+.finishStrategyDiv {
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 900;
+  font-family: Athletics;
+  color: #050505;
+  text-align: left;
+  display: inline-block;
+  opacity: 0.8;
+}
+.frameDiv84 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv83,
+.groupButton {
+  position: absolute;
+  width: 608px;
+}
+.frameDiv83 {
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.groupButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 688px;
+  left: 416px;
+  height: 56px;
+}
+.yieldchainLogo1 {
+  position: absolute;
+  top: 44px;
+  left: 64px;
+  width: 164.83px;
+  height: 32px;
+  object-fit: cover;
+}
+.squareEditOutlineIcon1 {
+  position: absolute;
+  top: 0;
+  left: 234px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.every2Days {
+  color: #fff;
+}
+.groupDiv8 {
+  position: absolute;
+  top: 136px;
+  left: 1118px;
+  width: 258px;
+  height: 24px;
+}
+.ellipseIcon4965,
+.groupDiv9,
+.groupIcon1 {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 24px;
+  height: 24px;
+}
+.ellipseIcon4965,
+.groupDiv9 {
+  top: 136px;
+  left: 890px;
+  width: 204px;
+}
+.ellipseIcon4965 {
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.iD65FG646Div {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  display: inline-block;
+}
+.chevronDownIcon,
+.groupDiv11 {
+  position: absolute;
+  top: 0;
+  left: 48px;
+  width: 74px;
+  height: 40px;
+}
+.chevronDownIcon {
+  top: 10px;
+  left: 138px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.groupDiv10 {
+  position: absolute;
+  top: 40px;
+  left: 1218px;
+  width: 158px;
+  height: 40px;
+  text-align: right;
+  color: #fff;
+}
+.simpleIconslitecoin {
+  position: relative;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+  object-fit: cover;
+}
+.etherumDiv {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.frameDiv86 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv86 > * + * {
+  margin-left: 8px;
+}
+.chevronDownIcon1 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.frameDiv85 {
+  position: absolute;
+  top: 40px;
+  left: 1063px;
+  border-radius: 4px;
+  border: 1px solid #2d2d31;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+}
+.frameDiv85 > * + * {
+  margin-left: 8px;
+}
+.vaultB {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.frameDiv88 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.groupDiv12 {
+  position: relative;
+  width: 65px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv87,
+.frameDiv89 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frameDiv87 {
+  position: absolute;
+  top: 48px;
+  left: 715px;
+  text-align: center;
+}
+.frameDiv87 > * + * {
+  margin-left: 24px;
+}
+.dashboardDiv {
+  position: relative;
+  background-color: #050505;
+  border: 1px solid #050505;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1506px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 16px;
+  color: #676771;
+  font-family: Athletics;
+}
