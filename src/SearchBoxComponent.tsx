@@ -7,7 +7,7 @@ export const SearchBoxComponent: FunctionComponent = () => {
   <input 
  type="text" 
  className={styles.rectangleDiv} 
- placeholder="Search for protocols" 
+ placeholder="Search for vault ID, token or protocol" 
  value={searchVar} 
  onChange={(event)=> {setSearchVar(event.target.value)}}
  /> 

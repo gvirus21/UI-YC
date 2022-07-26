@@ -1946,7 +1946,7 @@
   width: 140px;
   height: 140px;
   overflow-x: hidden  ;
-  overflow-y: auto;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   padding: 24px;

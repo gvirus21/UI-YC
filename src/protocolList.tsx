@@ -361,12 +361,13 @@ export const ProtocolList: FunctionComponent = () => {
           <div className={styles.frameDiv48}>
             <div className={styles.frameDiv49}>
               <img className={styles.plusIcon} alt="" src="plus1.svg" />
-              <div className={styles.addNewProtocol}> <button
+               <button 
+              className={styles.addNewProtocol}
         onClick={onButtonClick}
         data-animate-on-scroll>
         Add New Protocol
       </button>
-      </div>
+      
             </div>
           </div>
           <img
