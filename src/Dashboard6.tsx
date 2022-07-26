@@ -57,9 +57,7 @@ export const Dashboard6: FunctionComponent = () => {
         <Button
           className={styles.groupButton}
           sx={{ width: 61 }}
-          variant="outlined"
           color="success"
-          href="yieldchain.io"
         >
           Proceed
         </Button>
