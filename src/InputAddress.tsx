@@ -3,11 +3,11 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/Dashboard6.module.css";
 
-export const Dashboard6: FunctionComponent = () => {
+export const InputAddress: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
-    navigate("/createVault");
+    navigate("/inputDuration");
   }, [navigate]);
 
   const onFrameButton1Click = useCallback(() => {

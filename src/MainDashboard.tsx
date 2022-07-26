@@ -1,9 +1,16 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent,useCallback } from "react";
 import { SearchBoxComponent } from "./SearchBoxComponent";
 import { TextArea } from "./TextArea";
 import styles from "./css/Dashboard2.module.css";
+import { useNavigate } from "react-router-dom";
 
-export const Dashboard2: FunctionComponent = () => {
+
+export const MainDashboard: FunctionComponent = () => {
+  const navigate = useNavigate();
+
+  const onButtonClick = useCallback(() => {
+    navigate("/protocolList");
+  }, [navigate]);
   return (
     <div className={styles.mainDashboardDiv}>
       <button className={styles.yieldchainLogo1} />
@@ -49,14 +56,13 @@ export const Dashboard2: FunctionComponent = () => {
           <div className={styles.groupDiv4}>
             <div className={styles.groupDiv5}>
               <SearchBoxComponent />
-              <div className={styles.groupDiv6}>
+              <div className={styles.iconSearch}>
                 <img className={styles.icon1} alt="" src="icon1.svg" />
-                <TextArea />
               </div>
             </div>
           </div>
         </div>
-        <img className={styles.ellipseIcon2} alt="" />
+        {/* <img className={styles.ellipseIcon2} alt="" /> */}
         <div className={styles.frameDiv2}>
           <div className={styles.frameDiv3}>
             <div className={styles.groupIcon}>
@@ -123,7 +129,14 @@ export const Dashboard2: FunctionComponent = () => {
       </form>
       <div className={styles.frameDiv13}>
         <div className={styles.frameDiv10}>
-          <div className={styles.createVaultDiv}>Create Vault</div>
+          <div className={styles.createVaultDiv}>
+          <button
+         className={styles.createVaultDiv}
+        onClick={onButtonClick}
+        data-animate-on-scroll
+      >Create Vault
+      </button>
+      </div>
         </div>
       </div>
       <div className={styles.frameDiv15}>
@@ -954,6 +967,8 @@ export const Dashboard2: FunctionComponent = () => {
         <div className={styles.network1Div}>Network 2</div>
         <div className={styles.network1Div}>Network 3</div>
         <div className={styles.network1Div}>Network 4</div>
+        <div className={styles.network1Div}>Network 5</div>
+        <div className={styles.network1Div}>Network 6</div>
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/Dashboard.module.css";
 
-export const Dashboard: FunctionComponent = () => {
+export const CreateStrategy: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onGroupButtonClick = useCallback(() => {
-    navigate("/strategy-created");
+    navigate("/createVault");
   }, [navigate]);
 
   return (

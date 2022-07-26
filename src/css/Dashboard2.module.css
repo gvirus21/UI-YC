@@ -154,21 +154,21 @@
   width: 600px;
   height: 136px;
 }
-.groupDiv6,
-.icon1 {
-  position: absolute;
-  height: 24px;
-}
 .icon1 {
   top: 0;
   left: 0;
   width: 24px;
   overflow: hidden;
+  position: absolute;
+  height: 24px;
 }
-.groupDiv6 {
+
+.iconSearch {
   top: 16px;
   left: 16px;
-  width: 287px;
+  width: 30px;
+  position: absolute;
+  height: 24px;
 }
 .ellipseIcon2,
 .groupDiv2,
@@ -399,6 +399,7 @@
   overflow: hidden;
 }
 .createVaultDiv {
+  border: "none";
   position: relative;
   line-height: 24px;
   font-weight: 900;
@@ -1942,8 +1943,10 @@
   left: 848px;
   border-radius: 8px;
   background-color: #2d2d31;
-  width: 122px;
-  height: 172px;
+  width: 140px;
+  height: 140px;
+  overflow-x: hidden  ;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding: 24px;

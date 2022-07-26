@@ -4,14 +4,14 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import { StrategyCreated } from "./StrategyCreated";
-import { Dashboard } from "./Dashboard";
-import { Dashboard1 } from "./Dashboard1";
-import { Dashboard2 } from "./Dashboard2";
-import { Dashboard3 } from "./Dashboard3";
-import { Dashboard4 } from "./Dashboard4";
-import { Dashboard5 } from "./Dashboard5";
-import { Dashboard6 } from "./Dashboard6";
+import { InputDuration } from "./InputDuration";
+import { CreateStrategy } from "./CreateStrategy";
+import { CreateVault } from "./CreateVault";
+import { MainDashboard } from "./MainDashboard";
+import { Protocols } from "./Protocols";
+import { SearchedProtocol } from "./SearchedProtocol";
+import { ProtocolList } from "./protocolList";
+import { InputAddress } from "./InputAddress";
 import { useEffect } from "react";
 
 function App() {
@@ -81,21 +81,21 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/strategy-created" element={<StrategyCreated />} />
+      <Route path="/inputDuration" element={<InputDuration />} />
 
-      <Route path="/createStrategy" element={<Dashboard />} />
+      <Route path="/createStrategy" element={<CreateStrategy />} />
 
-      <Route path="/createVault" element={<Dashboard1 />} />
+      <Route path="/createVault" element={<CreateVault />} />
 
-      <Route path="/main-dashboard" element={<Dashboard2 />} />
+      <Route path="/inputAddress" element={<InputAddress />} />
 
-      <Route path="/protocols" element={<Dashboard3 />} />
+      <Route path="/protocols" element={<Protocols />} />
 
-      <Route path="/dashboard4" element={<Dashboard4 />} />
+      <Route path="/searchedProtocol" element={<SearchedProtocol />} />
 
-      <Route path="/protocol-list" element={<Dashboard5 />} />
+      <Route path="/protocolList" element={<ProtocolList />} />
 
-      <Route path="/" element={<Dashboard6 />} />
+      <Route path="/" element={<MainDashboard />} />
     </Routes>
   );
 }

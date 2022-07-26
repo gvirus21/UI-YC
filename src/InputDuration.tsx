@@ -5,14 +5,14 @@ import { Button } from "@mui/material";
 
 
 
-export const StrategyCreated: FunctionComponent = () => {
+export const InputDuration: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
-    navigate("/main-dashboard");
+    navigate("/createStrategy");
   }, [navigate]);
   return (
-    <div className={styles.strategyCreatedDiv}>
+    <div className={styles.StrategyCreatedDiv}>
       <div className={styles.frameDiv}>
         <div className={styles.vaultDiv}>Vault</div>
         <img
@@ -175,7 +175,7 @@ export const StrategyCreated: FunctionComponent = () => {
             <b className={styles.vaultDiv}>Cancel</b>
           </div>
         </div>
-        <b className={styles.strategyCreatedSuccessfully}>
+        <b className={styles.StrategyCreatedSuccessfully}>
           Strategy Created Successfully 🎉
         </b>
         <div className={styles.yourStrategyHasBeenCreated}>

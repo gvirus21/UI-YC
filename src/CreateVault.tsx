@@ -3,11 +3,11 @@ import styles from "./css/Dashboard1.module.css";
 import { useNavigate } from "react-router-dom";
 
 
-export const Dashboard1: FunctionComponent = () => {
+export const CreateVault: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
-    navigate("/createStrategy");
+    navigate("/");
   }, [navigate]);
   return (
     <div className={styles.dashboardDiv}>

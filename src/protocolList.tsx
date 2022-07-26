@@ -1,7 +1,14 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent,useCallback } from "react";
 import styles from "./css/Dashboard5.module.css";
+import { useNavigate } from "react-router-dom";
 
-export const Dashboard5: FunctionComponent = () => {
+
+export const ProtocolList: FunctionComponent = () => {
+  const navigate = useNavigate();
+
+  const onButtonClick = useCallback(() => {
+    navigate("/inputAddress");
+  }, [navigate]);
   return (
     <div className={styles.dashboardDiv}>
       <img className={styles.icon24cursor} alt="" src="icon24cursor6.svg" />
@@ -354,7 +361,12 @@ export const Dashboard5: FunctionComponent = () => {
           <div className={styles.frameDiv48}>
             <div className={styles.frameDiv49}>
               <img className={styles.plusIcon} alt="" src="plus1.svg" />
-              <div className={styles.addNewProtocol}>Add New Protocol</div>
+              <div className={styles.addNewProtocol}> <button
+        onClick={onButtonClick}
+        data-animate-on-scroll>
+        Add New Protocol
+      </button>
+      </div>
             </div>
           </div>
           <img

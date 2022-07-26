@@ -472,14 +472,14 @@
   height: 40px;
   color: #050505;
 }
-.strategyCreatedSuccessfully,
+.StrategyCreatedSuccessfully,
 .yourStrategyHasBeenCreated {
   position: absolute;
   left: 56px;
   font-family: Aktiv Grotesk Corp;
   display: inline-block;
 }
-.strategyCreatedSuccessfully {
+.StrategyCreatedSuccessfully {
   top: 56px;
   font-size: 24px;
   line-height: 32px;
@@ -545,7 +545,7 @@
   overflow: hidden;
   color: #fff;
 }
-.strategyCreatedDiv {
+.StrategyCreatedDiv {
   position: relative;
   background-color: #050505;
   border: 1px solid #050505;
