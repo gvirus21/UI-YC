@@ -1,5 +1,5 @@
 import { FunctionComponent,useCallback } from "react";
-import styles from "./css/Dashboard1.module.css";
+import styles from "./css/CreateVault.css";
 import { useNavigate } from "react-router-dom";
 
 

@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from "./css/Dashboard4.module.css";
+import styles from "./css/SearchedProtocols.css";
 
 export const SearchedProtocol: FunctionComponent = () => {
   return (

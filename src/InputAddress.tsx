@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback, useEffect } from "react";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import styles from "./css/Dashboard6.module.css";
+import styles from "./css/InputAddress.css";
 
 export const InputAddress: FunctionComponent = () => {
   const navigate = useNavigate();

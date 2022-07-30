@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./css/Dashboard.module.css";
+import styles from "./css/CreateStrategy.css";
 
 export const CreateStrategy: FunctionComponent = () => {
   const navigate = useNavigate();
