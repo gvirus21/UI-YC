@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import styles from "./css/SearchBoxComponent.module.css";
 
 export const SearchBoxComponent: FunctionComponent = () => {

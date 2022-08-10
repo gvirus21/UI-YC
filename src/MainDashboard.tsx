@@ -1,7 +1,7 @@
-import { FunctionComponent,useCallback } from "react";
+import React, { FunctionComponent,useCallback } from "react";
 import { SearchBoxComponent } from "./SearchBoxComponent";
 import { TextArea } from "./TextArea";
-import styles from "./css/MainDashboard.css";
+import styles from "./css/MainDashboard.module.css";
 import { useNavigate } from "react-router-dom";
 
 

@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import styles from "./css/Protocols.css";
+import React, { FunctionComponent } from "react";
+import styles from "./css/Protocols.module.css";
 
 export const Protocols: FunctionComponent = () => {
   return (
