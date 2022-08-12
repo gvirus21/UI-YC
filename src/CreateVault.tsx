@@ -1,5 +1,5 @@
-import { FunctionComponent,useCallback } from "react";
-import styles from "./css/CreateVault.css";
+import React, { FunctionComponent, useCallback } from "react";
+import styles from "./css/CreateVault.module.css";
 import { useNavigate } from "react-router-dom";
 
 

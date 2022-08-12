@@ -1,5 +1,5 @@
-import { FunctionComponent,useCallback } from "react";
-import styles from "./css/ProtocolList.css";
+import React, { FunctionComponent,useCallback } from "react";
+import styles from "./css/ProtocolList.module.css";
 import { useNavigate } from "react-router-dom";
 
 
