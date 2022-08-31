@@ -546,7 +546,7 @@
   color: #fff;
 }
 .StrategyCreatedDiv {
-  position: relative;
+  position: flex;
   background-color: #050505;
   border: 1px solid #050505;
   box-sizing: border-box;

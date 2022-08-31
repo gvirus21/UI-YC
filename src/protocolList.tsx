@@ -377,55 +377,7 @@ export const ProtocolList: FunctionComponent = () => {
           />
         </div>
       </div>
-      <img
-        className={styles.yieldchainLogo1}
-        alt=""
-        src="yieldchain-logo-1@2x.png"
-      />
-      <div className={styles.groupDiv12}>
-        <img className={styles.ellipseIcon} alt="" src="ellipse@2x.png" />
-        <div className={styles.groupDiv13}>
-          <div className={styles.aggregaredTVLDiv}>Metamask</div>
-          <div className={styles.iD65FG646Div}>ID65.....FG646</div>
-        </div>
-        <img
-          className={styles.chevronDownIcon1}
-          alt=""
-          src="chevrondown4.svg"
-        />
-      </div>
-      <div className={styles.frameDiv50}>
-        <div className={styles.frameDiv49}>
-          <img
-            className={styles.simpleIconslitecoin}
-            alt=""
-            src="simpleiconslitecoin@2x.png"
-          />
-          <div className={styles.etherumDiv}>Etherum</div>
-        </div>
-        <img className={styles.chevronDownIcon} alt="" src="chevrondown4.svg" />
-      </div>
-      <div className={styles.frameDiv52}>
-        <div className={styles.frameDiv53}>
-          <div className={styles.addNewProtocol}>Create Vault</div>
-        </div>
-      </div>
-      <div className={styles.frameDiv54}>
-        <div className={styles.frameDiv55}>
-          <b className={styles.vaultB}>Vault</b>
-        </div>
-        <div className={styles.frameDiv56}>
-          <div className={styles.groupDiv14}>
-            <div className={styles.portfolioDiv}>Portfolio</div>
-          </div>
-        </div>
-        <div className={styles.frameDiv56}>
-          <div className={styles.etherumDiv}>My Vault</div>
-        </div>
-        <div className={styles.frameDiv56}>
-          <div className={styles.etherumDiv}>Stake YC</div>
-        </div>
-      </div>
+    
     </div>
   );
 };

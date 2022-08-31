@@ -3,6 +3,8 @@ import {
   Route,
   useNavigationType,
   useLocation,
+  Router,
+  BrowserRouter,
 } from "react-router-dom";
 import { InputDuration } from "./InputDuration";
 import { CreateStrategy } from "./CreateStrategy";
@@ -13,6 +15,7 @@ import { SearchedProtocol } from "./SearchedProtocol";
 import { ProtocolList } from "./protocolList";
 import { InputAddress } from "./InputAddress";
 import { useEffect } from "react";
+import Header from "./Components/Layout/Header/Header";
 
 function App() {
   const action = useNavigationType();
@@ -80,7 +83,11 @@ function App() {
   }, [pathname]);
 
   return (
+     <div>
+     <Header/>
+      
     <Routes>
+      
       <Route path="/inputDuration" element={<InputDuration />} />
 
       <Route path="/createStrategy" element={<CreateStrategy />} />
@@ -97,6 +104,7 @@ function App() {
 
       <Route path="/" element={<MainDashboard />} />
     </Routes>
-  );
+  </div>
+   );
 }
 export default App;
