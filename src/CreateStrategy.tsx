@@ -5233,45 +5233,9 @@ export const CreateStrategy: FunctionComponent = () => {
         </div>
         <img className={styles.groupIcon1} alt="" src="group-1000002107.svg" />
       </div>
-      <div className={styles.groupDiv10}>
-        <img className={styles.ellipseIcon4965} alt="" src="ellipse@2x.png" />
-        <div className={styles.groupDiv11}>
-          <div className={styles.titleB}>Metamask</div>
-          <div className={styles.iD65FG646Div}>ID65.....FG646</div>
-        </div>
-        <img className={styles.chevronDownIcon} alt="" src="chevrondown4.svg" />
-      </div>
-      <div className={styles.frameDiv85}>
-        <div className={styles.frameDiv86}>
-          <img
-            className={styles.simpleIconslitecoin}
-            alt=""
-            src="simpleiconslitecoin@2x.png"
-          />
-          <div className={styles.etherumDiv}>Etherum</div>
-        </div>
-        <img
-          className={styles.chevronDownIcon1}
-          alt=""
-          src="chevrondown4.svg"
-        />
-      </div>
-      <div className={styles.frameDiv87}>
-        <div className={styles.frameDiv88}>
-          <b className={styles.vaultB}>Vault</b>
-        </div>
-        <div className={styles.frameDiv89}>
-          <div className={styles.groupDiv12}>
-            <div className={styles.selectActionDiv}>Portfolio</div>
-          </div>
-        </div>
-        <div className={styles.frameDiv89}>
-          <div className={styles.etherumDiv}>My Vault</div>
-        </div>
-        <div className={styles.frameDiv89}>
-          <div className={styles.etherumDiv}>Stake YC</div>
-        </div>
-      </div>
+ 
+ 
+ 
     </div>
   );
 };

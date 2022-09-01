@@ -1,4 +1,4 @@
-import React, { FunctionComponent,useCallback } from "react";
+import React, { FunctionComponent, useCallback } from "react";
 import { SearchBoxComponent } from "./SearchBoxComponent";
 import { TextArea } from "./TextArea";
 import styles from "./css/MainDashboard.module.css";
@@ -8,35 +8,8 @@ import { useNavigate } from "react-router-dom";
 export const MainDashboard: FunctionComponent = () => {
   const navigate = useNavigate();
 
-  const onButtonClick = useCallback(() => {
-    navigate("/protocolList");
-  }, [navigate]);
   return (
-    <div className={styles.mainDashboardDiv}>
-      <button className={styles.yieldchainLogo1} />
-      <div className={styles.groupDiv}>
-        <img className={styles.ellipseIcon} alt="" src="ellipse@2x.png" />
-        <div className={styles.groupDiv1}>
-          <div className={styles.metamaskDiv}>Metamask</div>
-          <div className={styles.iD65FG646Div}>ID65.....FG646</div>
-        </div>
-        <img className={styles.chevronDownIcon} alt="" src="chevrondown4.svg" />
-      </div>
-      <div className={styles.frameDiv}>
-        <div className={styles.frameDiv1}>
-          <img
-            className={styles.simpleIconslitecoin}
-            alt=""
-            src="simpleiconslitecoin@2x.png"
-          />
-          <div className={styles.etherumDiv}>Etherum</div>
-        </div>
-        <img
-          className={styles.chevronDownIcon1}
-          alt=""
-          src="chevrondown4.svg"
-        />
-      </div>
+    <div   className={styles.mainDashboardDiv}>
       <form
         className={styles.frameForm}
         action="https://yieldchain.io/"
@@ -80,19 +53,19 @@ export const MainDashboard: FunctionComponent = () => {
             <b className={styles.allNetworksB}>All Networks</b>
           </div>
           <div className={styles.frameDiv3}>
-            <img className={styles.groupIcon} alt="" src="group-4912.svg" />
+            <img className={styles.groupIcon} alt="" src="group-Binance.svg" />
             <div className={styles.binanceSCDiv}>Binance SC</div>
           </div>
           <div className={styles.frameDiv3}>
-            <img className={styles.groupIcon} alt="" src="group-4913.svg" />
+            <img className={styles.groupIcon} alt="" src="group-Avalanche.svg" />
             <div className={styles.binanceSCDiv}>Avalanche</div>
           </div>
           <div className={styles.frameDiv3}>
-            <img className={styles.groupIcon} alt="" src="group-55650.svg" />
+            <img className={styles.groupIcon} alt="" src="group-Ethereum.svg" />
             <div className={styles.binanceSCDiv}>Ethereum</div>
           </div>
           <div className={styles.frameDiv3}>
-            <img className={styles.groupIcon} alt="" src="group-556501.svg" />
+            <img className={styles.groupIcon} alt="" src="group-Polygon.svg" />
             <div className={styles.binanceSCDiv}>Polygon</div>
           </div>
           <div className={styles.frameDiv8}>
@@ -127,18 +100,7 @@ export const MainDashboard: FunctionComponent = () => {
           </div>
         </div>
       </form>
-      <div className={styles.frameDiv13}>
-        <div className={styles.frameDiv10}>
-          <div className={styles.createVaultDiv}>
-          <button
-         className={styles.createVaultDiv}
-        onClick={onButtonClick}
-        data-animate-on-scroll
-      >Create Vault
-      </button>
-      </div>
-        </div>
-      </div>
+
       <div className={styles.frameDiv15}>
         <div className={styles.rectangleDiv} />
         <div className={styles.frameDiv16}>
@@ -945,22 +907,7 @@ export const MainDashboard: FunctionComponent = () => {
           <div className={styles.myDepositsDiv}>Deposit Tokens</div>
         </div>
       </div>
-      <div className={styles.frameDiv128}>
-        <div className={styles.frameDiv129}>
-          <b className={styles.vaultB}>Vault</b>
-        </div>
-        <div className={styles.frameDiv130}>
-          <div className={styles.groupDiv69}>
-            <div className={styles.portfolioDiv}>Portfolio</div>
-          </div>
-        </div>
-        <div className={styles.frameDiv130}>
-          <div className={styles.etherumDiv}>My Vault</div>
-        </div>
-        <div className={styles.frameDiv130}>
-          <div className={styles.etherumDiv}>Stake YC</div>
-        </div>
-      </div>
+
       <div className={styles.allVaultsDiv}>All Vaults</div>
       <div className={styles.frameDiv133}>
         <div className={styles.network1Div}>Network 1</div>
