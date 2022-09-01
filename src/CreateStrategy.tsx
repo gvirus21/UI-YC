@@ -8,6 +8,12 @@ export const CreateStrategy: FunctionComponent = () => {
   const onGroupButtonClick = useCallback(() => {
     navigate("/createVault");
   }, [navigate]);
+  const onActionButtonClick = useCallback(() => {
+    navigate("/createVault");
+  }, [navigate]);
+  const inputDurationClick = useCallback(() => {
+    navigate("/inputDuration");
+  }, [navigate]);
 
   return (
     <div className={styles.dashboardDiv}>
@@ -5129,11 +5135,13 @@ export const CreateStrategy: FunctionComponent = () => {
           className={styles.trashCanOutlineIcon}
           alt=""
           src="trashcanoutline.svg"
+          onClick={inputDurationClick}
         />
         <img
           className={styles.squareEditOutlineIcon}
           alt=""
           src="squareeditoutline.svg"
+          onClick={onActionButtonClick}
         />
         <div className={styles.frameDiv71}>
           <div className={styles.colorsLayerStyles}>Stake</div>
@@ -5159,43 +5167,47 @@ export const CreateStrategy: FunctionComponent = () => {
         <div className={styles.groupDiv}>
           <div className={styles.selectActionDiv}>Select Action</div>
         </div>
-        <div className={styles.frameDiv76}>
+        <div className={styles.frameDiv76} onClick={onActionButtonClick}>
           <div className={styles.groupDiv1}>
-            <div className={styles.titleDiv}>Stake token</div>
+        {/* <button className={styles.groupDiv1} onClick={onActionButtonClick}> */}
+            <div onClick={onGroupButtonClick} className={styles.titleDiv}>Stake token </div>
+        {/* <button className={styles.groupButton} onClick={onGroupButtonClick}> */}
+            {/* onClick={onActionButtonClick} */}
+        {/* </button> */}
           </div>
           <img className={styles.arrowLeftIcon} alt="" src="arrowleft.svg" />
         </div>
-        <div className={styles.frameDiv77}>
+        <div className={styles.frameDiv77} onClick={onActionButtonClick}>
           <div className={styles.groupDiv2}>
             <b className={styles.titleB}>Add Liquidity</b>
           </div>
           <img className={styles.arrowLeftIcon} alt="" src="arrowleft1.svg" />
         </div>
-        <div className={styles.frameDiv78}>
+        <div className={styles.frameDiv78}  onClick={onActionButtonClick}>
           <div className={styles.groupDiv3}>
             <b className={styles.titleB}>Swap token</b>
           </div>
           <img className={styles.arrowLeftIcon} alt="" src="arrowleft2.svg" />
         </div>
-        <div className={styles.frameDiv79}>
+        <div className={styles.frameDiv79} onClick={onActionButtonClick}>
           <div className={styles.groupDiv4}>
             <b className={styles.titleB}>LP ZAP</b>
           </div>
           <img className={styles.arrowLeftIcon} alt="" src="arrowleft3.svg" />
         </div>
-        <div className={styles.frameDiv80}>
-          <div className={styles.groupDiv5}>
+        <div className={styles.frameDiv80} onClick={onActionButtonClick}>
+          <div className={styles.groupDiv5} >
             <b className={styles.titleB}>Harvest token</b>
           </div>
           <img className={styles.arrowLeftIcon} alt="" src="chevronright.svg" />
         </div>
-        <div className={styles.frameDiv81}>
+        <div className={styles.frameDiv81} onClick={onActionButtonClick}>
           <div className={styles.groupDiv6}>
             <b className={styles.titleB}>Remove Liquidity</b>
           </div>
           <img className={styles.arrowLeftIcon} alt="" src="arrowleft4.svg" />
         </div>
-        <div className={styles.frameDiv82}>
+        <div className={styles.frameDiv82} onClick={onActionButtonClick}>
           <div className={styles.groupDiv7}>
             <b className={styles.titleB}>Bridge token</b>
           </div>
@@ -5220,6 +5232,7 @@ export const CreateStrategy: FunctionComponent = () => {
           className={styles.squareEditOutlineIcon1}
           alt=""
           src="squareeditoutline.svg"
+          onClick={inputDurationClick}
         />
         <div className={styles.titleB}>
           <span>Strategy deploys: </span>
