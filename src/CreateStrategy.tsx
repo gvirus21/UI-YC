@@ -5135,6 +5135,7 @@ export const CreateStrategy: FunctionComponent = () => {
           className={styles.trashCanOutlineIcon}
           alt=""
           src="trashcanoutline.svg"
+          onClick={inputDurationClick}
         />
         <img
           className={styles.squareEditOutlineIcon}
