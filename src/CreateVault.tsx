@@ -1,16 +1,28 @@
-import React, { FunctionComponent, useCallback } from "react";
+import React, { FunctionComponent, useState, useCallback } from "react";
 import styles from "./css/CreateVault.module.css";
 import { useNavigate } from "react-router-dom";
 
 
+const vaultAction = {
+  STAKE: "Stake",
+  SWAP: "Swap"
+}
+
 export const CreateVault: FunctionComponent = () => {
+
+  const [action, setAction] = useState(vaultAction.STAKE)
+
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
     navigate("/");
   }, [navigate]);
+
+
   return (
     <div className={styles.dashboardDiv}>
+
+      {/* // Top nav root */}
       <div className={styles.frameDiv}>
         <div className={styles.vaultDiv}>Vault</div>
         <img
@@ -20,7 +32,10 @@ export const CreateVault: FunctionComponent = () => {
         />
         <b className={styles.createVaultB}>Create Vault</b>
       </div>
-      <img className={styles.icon24cursor} alt="" src="icon24cursor2.svg" />
+
+      {/* <img className={styles.icon24cursor} alt="" src="icon24cursor2.svg" /> */}
+
+    {/* Main Form */}
       <form className={styles.groupForm} action="Action" method="get" id="0" onClick={onButtonClick}>
         <div className={styles.rectangleDiv} />
         <div className={styles.frameDiv1}>
@@ -33,7 +48,7 @@ export const CreateVault: FunctionComponent = () => {
                   alt=""
                   src="chevrondown.svg"
                 />
-                <div className={styles.stakeDiv}>Stake</div>
+                <div className={styles.stakeDiv}>{action}</div>
               </div>
             </div>
             <div className={styles.actionDiv}>Action</div>
@@ -101,7 +116,8 @@ export const CreateVault: FunctionComponent = () => {
           </div>
         </div>
       </form>
-      <div className={styles.cantFindPoolAggregateIn2}>
+
+      {/* <div className={styles.cantFindPoolAggregateIn2}>
         Cant find pool, Aggregate in 2min
       </div>
       <img
@@ -140,7 +156,8 @@ export const CreateVault: FunctionComponent = () => {
         <div className={styles.frameDiv3}>
           <div className={styles.createVaultDiv}>Create Vault</div>
         </div>
-      </div>
+      </div> 
+      
       <div className={styles.frameDiv8}>
         <div className={styles.frameDiv9}>
           <b className={styles.vaultB}>Vault</b>
@@ -156,7 +173,7 @@ export const CreateVault: FunctionComponent = () => {
         <div className={styles.frameDiv10}>
           <div className={styles.etherumDiv}>Stake YC</div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
