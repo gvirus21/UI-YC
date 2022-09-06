@@ -16,6 +16,9 @@ import { ProtocolList } from "./protocolList";
 import { InputAddress } from "./InputAddress";
 import { useEffect } from "react";
 import Header from "./Components/Layout/Header/Header";
+import Modal from 'react-modal'
+
+Modal.setAppElement("#root")
 
 function App() {
   const action = useNavigationType();

@@ -464,3 +464,55 @@
   color: #676771;
   font-family: Athletics;
 }
+
+
+/* Gourav's styles */
+
+.modalHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeading h2 {
+  font-size: 20px;
+}
+
+.modalTokenContainer {
+  margin-top: 30px;
+  background-color: transparent;
+}
+
+.modalSearchBar {
+  background-color: #232222;
+  height: 52px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalSearchInput {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  width: 80%;
+  color: #fff;
+}
+
+.modalTokenComponent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTokenSymbol {
+  color: #fff;
+}
+
+.modalTokenLogo {
+  height: 30px;
+}

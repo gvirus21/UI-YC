@@ -1,16 +1,23 @@
-import React, { FunctionComponent, useState, useCallback } from "react";
+import { FunctionComponent, useState, useCallback } from "react";
 import styles from "./css/CreateVault.module.css";
 import { useNavigate } from "react-router-dom";
-
+import { IToken } from "./types";
+import Modal from "react-modal";
+import Tokens from "./data/Tokens.json";
+import { BiSearch } from "react-icons/bi";
+import { GrClose } from "react-icons/gr";
 
 const vaultAction = {
   STAKE: "Stake",
-  SWAP: "Swap"
-}
+  SWAP: "Swap",
+};
 
 export const CreateVault: FunctionComponent = () => {
-
-  const [action, setAction] = useState(vaultAction.STAKE)
+  const [action, setAction] = useState(vaultAction.STAKE);
+  const [fromToken, setFromToken] = useState<IToken | null>(null);
+  const [toToken, setToToken] = useState<IToken | null>(null);
+  const [filteredTokens, setFilteredTokens] = useState<IToken[]>(Tokens);
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(true);
 
   const navigate = useNavigate();
 
@@ -18,10 +25,26 @@ export const CreateVault: FunctionComponent = () => {
     navigate("/");
   }, [navigate]);
 
+  const openConfig = () => {
+    setModalIsOpen(!modalIsOpen);
+  };
+
+  const selectFromTokenAction = (id: string) => {
+    const selectedToken = filteredTokens.find((token) => token.id === id);
+    selectedToken && setFromToken(selectedToken);
+  };
+
+  const selectToTokenAction = (id: string) => {
+    const selectedToken = filteredTokens.find((token) => token.id === id);
+    selectedToken && setToToken(selectedToken);
+  };
+
+  const handleSearch = (e) => {
+    // setFilteredTokens()
+  }
 
   return (
     <div className={styles.dashboardDiv}>
-
       {/* // Top nav root */}
       <div className={styles.frameDiv}>
         <div className={styles.vaultDiv}>Vault</div>
@@ -35,8 +58,14 @@ export const CreateVault: FunctionComponent = () => {
 
       {/* <img className={styles.icon24cursor} alt="" src="icon24cursor2.svg" /> */}
 
-    {/* Main Form */}
-      <form className={styles.groupForm} action="Action" method="get" id="0" onClick={onButtonClick}>
+      {/* Main Form */}
+      <form
+        className={styles.groupForm}
+        action="Action"
+        method="get"
+        id="0"
+        onClick={onButtonClick}
+      >
         <div className={styles.rectangleDiv} />
         <div className={styles.frameDiv1}>
           <div className={styles.groupDiv}>
@@ -117,63 +146,56 @@ export const CreateVault: FunctionComponent = () => {
         </div>
       </form>
 
-      {/* <div className={styles.cantFindPoolAggregateIn2}>
-        Cant find pool, Aggregate in 2min
-      </div>
-      <img
-        className={styles.yieldchainLogo1}
-        alt=""
-        src="yieldchain-logo-1@2x.png"
-      />
-      <div className={styles.groupDiv14}>
-        <img className={styles.ellipseIcon2} alt="" src="ellipse@2x.png" />
-        <div className={styles.groupDiv15}>
-          <div className={styles.metamaskDiv}>Metamask</div>
-          <div className={styles.iD65FG646Div}>ID65.....FG646</div>
-        </div>
-        <img
-          className={styles.chevronDownIcon4}
-          alt=""
-          src="chevrondown4.svg"
-        />
-      </div>
-      <div className={styles.frameDiv4}>
-        <div className={styles.frameDiv5}>
-          <img
-            className={styles.simpleIconslitecoin}
-            alt=""
-            src="simpleiconslitecoin@2x.png"
-          />
-          <div className={styles.etherumDiv}>Etherum</div>
-        </div>
-        <img
-          className={styles.chevronDownIcon5}
-          alt=""
-          src="chevrondown4.svg"
-        />
-      </div>
-      <div className={styles.frameDiv6}>
-        <div className={styles.frameDiv3}>
-          <div className={styles.createVaultDiv}>Create Vault</div>
-        </div>
-      </div> 
-      
-      <div className={styles.frameDiv8}>
-        <div className={styles.frameDiv9}>
-          <b className={styles.vaultB}>Vault</b>
-        </div>
-        <div className={styles.frameDiv10}>
-          <div className={styles.groupDiv16}>
-            <div className={styles.portfolioDiv}>Portfolio</div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        // tokens={}
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0,0,0,0.5)",
+          },
+          content: {
+            background: "#2D2D31",
+            border: "transparent",
+            height: "600px",
+            width: "300px",
+          },
+        }}
+      >
+        {/* Searchbar */}
+        <div>
+          <div className={styles.modalHeading}>
+            <h2>Swap From</h2>
+            <GrClose color='white' />
+          </div>
+          <div className={styles.modalSearchBar}>
+          {/* search icon */}
+            <BiSearch color="white" scale={2} />
+            <input type="text" placeholder="search.." className={styles.modalSearchInput} onChange={(e) => {}}  />
           </div>
         </div>
-        <div className={styles.frameDiv10}>
-          <div className={styles.etherumDiv}>My Vault</div>
+
+        {/* List of Tokens */}
+        <div className={styles.modalTokenContainer}>
+          {filteredTokens.map((token: IToken) => {
+            return (
+              <div
+                key={token.id}
+                className={styles.modalTokenComponent}
+                onClick={() => selectFromTokenAction(token.id)}
+              >
+                {console.log("token: ", token.logo)}
+                <img src={token.logo} placeholder="token-logo" className={styles.modalTokenLogo} />
+                <p className={styles.modalTokenSymbol}>{token.symbol}</p>
+              </div>
+            );
+          })}
         </div>
-        <div className={styles.frameDiv10}>
-          <div className={styles.etherumDiv}>Stake YC</div>
-        </div>
-      </div> */}
+      </Modal>
+
+      <button className="" onClick={() => openConfig()}>
+        Open Popup
+      </button>
     </div>
   );
 };
