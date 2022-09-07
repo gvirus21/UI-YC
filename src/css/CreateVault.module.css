@@ -468,19 +468,33 @@
 
 /* Gourav's styles */
 
-.modalHeading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.modalTopSection {
+  /* margin-bottom: 20px; */
 }
 
-.modalHeading h2 {
-  font-size: 20px;
+.modalHeadingSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 100%
+}
+
+.modalHeadingSection h2 {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
 }
 
 .modalTokenContainer {
   margin-top: 30px;
-  background-color: transparent;
+  height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.modalTokenContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .modalSearchBar {
@@ -505,14 +519,34 @@
 
 .modalTokenComponent {
   display: flex;
+  border-bottom: gray 1px solid;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
+  padding: 0 0 20px 0;
+}
+
+.modalComponentData {
+  display: flex;
 }
 
 .modalTokenSymbol {
+  margin: 0;
   color: #fff;
+  font-size: 20px;
+}
+
+.modalTokenName {
+  margin: 0;
+  color: #777;
 }
 
 .modalTokenLogo {
-  height: 30px;
+  height: 40px;
+  margin-right: 16px;
 }
+
+.modalSendLogo {
+  height: 20px;
+}
+ 

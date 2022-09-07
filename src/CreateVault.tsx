@@ -5,7 +5,7 @@ import { IToken } from "./types";
 import Modal from "react-modal";
 import Tokens from "./data/Tokens.json";
 import { BiSearch } from "react-icons/bi";
-import { GrClose } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
 
 const vaultAction = {
   STAKE: "Stake",
@@ -17,7 +17,7 @@ export const CreateVault: FunctionComponent = () => {
   const [fromToken, setFromToken] = useState<IToken | null>(null);
   const [toToken, setToToken] = useState<IToken | null>(null);
   const [filteredTokens, setFilteredTokens] = useState<IToken[]>(Tokens);
-  const [modalIsOpen, setModalIsOpen] = useState<boolean>(true);
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
@@ -25,8 +25,9 @@ export const CreateVault: FunctionComponent = () => {
     navigate("/");
   }, [navigate]);
 
-  const openConfig = () => {
+  const toggleConfig = () => {
     setModalIsOpen(!modalIsOpen);
+    setFilteredTokens(Tokens)
   };
 
   const selectFromTokenAction = (id: string) => {
@@ -40,8 +41,13 @@ export const CreateVault: FunctionComponent = () => {
   };
 
   const handleSearch = (e) => {
-    // setFilteredTokens()
-  }
+    const searchTerm = e.target.value;
+    console.log("searchTerm: ", searchTerm)
+
+    const filteredList = Tokens.filter((token) => token.id.toLowerCase().includes(searchTerm.toLowerCase()) || token.name.toLowerCase().includes(searchTerm.toLowerCase()) || token.symbol.toLowerCase().includes(searchTerm.toLowerCase()))
+
+    setFilteredTokens(filteredList)
+  };
 
   return (
     <div className={styles.dashboardDiv}>
@@ -149,29 +155,38 @@ export const CreateVault: FunctionComponent = () => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
-        // tokens={}
         style={{
           overlay: {
             backgroundColor: "rgba(0,0,0,0.5)",
           },
           content: {
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
             background: "#2D2D31",
             border: "transparent",
             height: "600px",
-            width: "300px",
+            width: "400px",
+            borderRadius: '15px',
+            scrollbarColor: 'transparent',
           },
         }}
       >
         {/* Searchbar */}
-        <div>
-          <div className={styles.modalHeading}>
+        <div className={styles.modalTopSection}>
+          <div className={styles.modalHeadingSection}>
             <h2>Swap From</h2>
-            <GrClose color='white' />
+            <AiOutlineClose color="white" scale={2} onClick={() => toggleConfig()} />
           </div>
           <div className={styles.modalSearchBar}>
-          {/* search icon */}
+            {/* search icon */}
             <BiSearch color="white" scale={2} />
-            <input type="text" placeholder="search.." className={styles.modalSearchInput} onChange={(e) => {}}  />
+            <input
+              type="text"
+              placeholder="search.."
+              className={styles.modalSearchInput}
+              onChange={(e) => handleSearch(e)} 
+            />
           </div>
         </div>
 
@@ -184,16 +199,30 @@ export const CreateVault: FunctionComponent = () => {
                 className={styles.modalTokenComponent}
                 onClick={() => selectFromTokenAction(token.id)}
               >
-                {console.log("token: ", token.logo)}
-                <img src={token.logo} placeholder="token-logo" className={styles.modalTokenLogo} />
-                <p className={styles.modalTokenSymbol}>{token.symbol}</p>
+                <div className={styles.modalComponentData}>
+                  <img
+                    src={token.logo}
+                    placeholder="token-logo"
+                    className={styles.modalTokenLogo}
+                  />
+                  <div className={styles.tokenNameContainer}>
+                    <p className={styles.modalTokenSymbol}>{token.symbol}</p>
+                    <p className={styles.modalTokenName}>{token.name}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <img src='/logos/send.png' className={styles.modalSendLogo} />
+                </div>
               </div>
+
+              
             );
           })}
         </div>
       </Modal>
 
-      <button className="" onClick={() => openConfig()}>
+      <button className="" onClick={() => toggleConfig()}>
         Open Popup
       </button>
     </div>
