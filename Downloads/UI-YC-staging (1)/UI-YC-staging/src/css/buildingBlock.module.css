@@ -1,0 +1,16 @@
+.blockDiv {
+  background: #202023;
+  border-radius: 6.652px;
+  padding: 13px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.innerDiv {
+  background: #2d2d31;
+  border-radius: 13.304px;
+  padding: 3.326px 6.652px;
+  display: flex;
+  gap: 3.6px;
+}
