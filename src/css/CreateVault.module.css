@@ -24,6 +24,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  
 }
 .frameDiv > * + * {
   margin-left: 8px;
@@ -52,12 +53,13 @@
   border-left: 0 solid #050505;
   width: 1440px;
   height: 1322px;
+  z-index: 1
 }
 .rectangleDiv1 {
   width: 100%;
   right: 0;
   border-radius: 4px;
-  background-color: #2d2d31;
+  background-color: #000000;
   border: 1px solid #2d2d31;
   height: 56px;
 }
@@ -93,12 +95,14 @@
 .groupDiv2 {
   position: absolute;
   left: 0;
+  
 }
 .groupDiv1 {
   width: 100%;
   top: 32px;
   right: 0;
   height: 56px;
+  
 }
 .actionDiv {
   top: 0;
@@ -109,11 +113,12 @@
   color: #fff;
   text-align: left;
   display: inline-block;
+  z-index: 10;
 }
 .groupDiv {
   position: absolute;
   width: 92.11%;
-  top: 24px;
+  top: 34px;
   right: 3.95%;
   left: 3.95%;
   height: 88px;
@@ -157,7 +162,7 @@
 }
 .groupDiv3 {
   width: 92.11%;
-  top: 128px;
+  top: 155px;
   right: 3.95%;
   left: 3.95%;
   height: 88px;
@@ -182,7 +187,7 @@
 .rectangleDiv4 {
   position: absolute;
   width: 92.11%;
-  top: 240px;
+  top: 280px;
   right: 3.95%;
   left: 3.95%;
   height: 88px;
@@ -237,23 +242,59 @@
   display: inline-block;
   opacity: 0.8;
 }
+.cancelActionBtnDiv{
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 900;
+  font-family: Athletics;
+  color: white;
+  text-align: left;
+  display: inline-block;
+  opacity: 0.8;
+ 
+}
+.cancelActionBtnDiv:hover{
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 900;
+  font-family: Athletics;
+  color: white;
+  text-align: left;
+  display: inline-block;
+  opacity: 0.8;
+}
 .frameDiv2,
+.cancelActionBtn
 .frameDiv3 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  cursor: pointer;
 }
 .frameDiv2 {
   position: absolute;
   top: 472px;
-  left: 24px;
+  left: 210px;
   border-radius: 8px;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
-  flex-direction: column;
   padding: 16px 40px;
   box-sizing: border-box;
 }
+.cancelActionBtn {
+  position: absolute;
+  top: 472px;
+  left: 24px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  color: white;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 .frameDiv1 {
   position: absolute;
   top: 40px;
@@ -262,6 +303,7 @@
   background-color: #202023;
   width: 608px;
   height: 552px;
+  z-index: 2;
 }
 .groupForm {
   position: absolute;
@@ -464,3 +506,121 @@
   color: #676771;
   font-family: Athletics;
 }
+
+.menuContainer {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  
+  
+}
+
+.menu {
+  cursor: pointer;
+  background: #442b2b;
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #683f3f;
+  
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 20px;
+  display: block;
+}
+
+.menuTrigger {
+  cursor: pointer;
+  background: none;
+  border-radius: 90px;
+  color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  vertical-align: middle;
+  transition: box-shadow 0.4s ease;
+  
+}
+
+.menuTrigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menuTriggerspan {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.menuTrigger img {
+  border-radius: 90px;
+}
+
+.dropdownProtocol {
+  cursor: pointer;
+  background: none;
+  border-radius: 3px;
+  width: 100%;
+  background-color: #000000;
+  height: 50px;
+  color: #ffff;
+  padding: 8px 8px 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  vertical-align: middle;
+  text-align: center;
+  transition: box-shadow 0.4s ease;
+  z-index: 4000;
+ 
+}
+
+ 
+.dropdownProtocolStyle {
+  border: none;
+  background-color: #010101;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  color: rgba(255, 255, 255, 0.685);
+  font-size: 14px;
+  z-index: 5000;
+
+   
+}
+
+ul{
+padding-inline-start: 0px;
+padding-inline-end: 0px;
+}
+ 
