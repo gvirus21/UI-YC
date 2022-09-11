@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ActionInput from "./Components/CreateVault/ActionInput";
 import useStore from "./store";
 import StakeAction from "./Components/CreateVault/Stake/StakeAction";
+import SwapAction from "./Components/CreateVault/Swap/SwapAction";
 
 export const CreateVault: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -36,13 +37,21 @@ export const CreateVault: FunctionComponent = () => {
       </div>
       <div className={styles.groupForm}>
         <div className={styles.rectangleDiv} />
+        
         <div className={styles.frameDiv1}>
           <ActionInput action={actionSelected} />
           {actionSelected == "Stake token " &&
           <div>
-          <StakeAction/>
+            <StakeAction/>
           </div>
           }
+          {actionSelected == "Swap token" &&
+          <div>
+            <SwapAction/>
+          </div>
+          }
+
+          {/* Buttons */}
           <div onClick={onCancelActionClick} className={styles.cancelActionBtn}>
             <div className={styles.frameDiv3}>
               <div
