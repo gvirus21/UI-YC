@@ -2,6 +2,7 @@
   position: relative;
   line-height: 24px;
   display: inline-block;
+  
 }
 .arrowChevronDuoRight {
   position: relative;
@@ -463,4 +464,5 @@
   font-size: 14px;
   color: #676771;
   font-family: Athletics;
+   
 }
