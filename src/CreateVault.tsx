@@ -13,7 +13,6 @@ export const CreateVault: FunctionComponent = () => {
 
   useEffect(()=>{
     setActionSelected(store.vaultAction);
-    console.log(actionSelected+'we')
   },[])
 
   const onCancelActionClick = useCallback(() => {

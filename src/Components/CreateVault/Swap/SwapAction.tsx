@@ -6,13 +6,31 @@ import Modal from "react-modal";
 import Tokens from "../../../data/Tokens.json";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import SwapFromTokenSelection from "./SwapFromTokenSelection";
+import SwapToTokenSelection from "./SwapToTokenSelection";
+import { style } from "@mui/system";
+import SwapModal from "./SwapModal";
+
+const IntitalFromToken: IToken = {
+  "id": "bitcoin",
+  "name": "Bitcoin",
+  "symbol": "BTC",
+  "logo": "../logos/bitcoin.png"
+}
+
+const IntitalToToken: IToken = {
+  "id": "ethereum",
+  "name": "Ethereum",
+  "symbol": "ETH",
+  "logo": "../logos/ethereum.png"
+}
 
 const SwapAction = () => {
-  const [action, setAction] = useState("Swap");
-  const [fromToken, setFromToken] = useState<IToken | null>(null);
-  const [toToken, setToToken] = useState<IToken | null>(null);
+  const [fromToken, setFromToken] = useState<IToken | null>(IntitalFromToken);
+  const [toToken, setToToken] = useState<IToken | null>(IntitalToToken);
   const [filteredTokens, setFilteredTokens] = useState<IToken[]>(Tokens);
-  const [modalIsOpen, setModalIsOpen] = useState<boolean>(true);
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  const [modalAction, setModalAction] = useState<"to" | "from">('from')
 
   const navigate = useNavigate();
 
@@ -20,7 +38,7 @@ const SwapAction = () => {
     navigate("/");
   }, [navigate]);
 
-  const toggleConfig = () => {
+  const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
     setFilteredTokens(Tokens);
   };
@@ -28,11 +46,13 @@ const SwapAction = () => {
   const selectFromTokenAction = (id: string) => {
     const selectedToken = filteredTokens.find((token) => token.id === id);
     selectedToken && setFromToken(selectedToken);
+    toggleModal()
   };
 
   const selectToTokenAction = (id: string) => {
     const selectedToken = filteredTokens.find((token) => token.id === id);
     selectedToken && setToToken(selectedToken);
+    toggleModal()
   };
 
   const handleSearch = (e: any) => {
@@ -49,88 +69,39 @@ const SwapAction = () => {
     setFilteredTokens(filteredList);
   };
 
+  const handleSelect = (tokenId: string) => {
+    if (modalAction === 'from') {
+      selectFromTokenAction(tokenId)
+    } else if (modalAction==='to') {
+      selectToTokenAction(tokenId)
+    }
+  } 
+
+  
+
   return (
     <div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(false)}
-        style={{
-          overlay: {
-            backgroundColor: "rgba(0,0,0,0.5)",
-            zIndex: 999
-          },
-          content: {
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            background: "#2D2D31",
-            border: "transparent",
-            height: "600px",
-            width: "400px",
-            borderRadius: "15px",
-            scrollbarColor: "transparent",
-          },
-        }}
-      >
-        {/* Searchbar */}
-        <div className={styles.modalTopSection}>
-          <div className={styles.modalHeadingSection}>
-            <h2>Swap From</h2>
-            <AiOutlineClose
-              color="white"
-              scale={2}
-              onClick={() => toggleConfig()}
-            />
+      <SwapModal
+        modalAction={modalAction} 
+        modalIsOpen={modalIsOpen} 
+        setModalIsOpen={setModalIsOpen} 
+        filteredTokens={filteredTokens} 
+        toggleModal={toggleModal} 
+        handleSearch={handleSearch} 
+        handleSelect={handleSelect} 
+      />
+
+          <div className={styles.SwapTokenSelectonContainer}>
+            <h3 className={styles.swapHeadingText} >Swap from</h3>
+            <SwapFromTokenSelection selectedFromToken={fromToken} toggleModal={toggleModal} setModalAction={setModalAction} />
+
+            {/* swap icon */}
+            <img src='/logos/swap.png' alt='swap-icon' className={styles.swapIcon} />
+
+            <h3 className={styles.swapHeadingText} >Swap to</h3>
+            <SwapToTokenSelection selectedToToken={toToken} toggleModal={toggleModal} setModalAction={setModalAction} />
           </div>
-          <div className={styles.modalSearchBar}>
-            {/* search icon */}
-            <BiSearch color="white" scale={2} />
-            <input
-              type="text"
-              placeholder="search.."
-              className={styles.modalSearchInput}
-              onChange={(e) => handleSearch(e)}
-            />
-          </div>
-        </div>
 
-        {/* List of Tokens */}
-        <div className={styles.modalTokenContainer}>
-          {filteredTokens.map((token: IToken) => {
-            return (
-              <div
-                key={token.id}
-                className={styles.modalTokenComponent}
-                onClick={() => selectFromTokenAction(token.id)}
-              >
-                <div className={styles.modalComponentData}>
-                  <img
-                    src={token.logo}
-                    placeholder="token-logo"
-                    className={styles.modalTokenLogo}
-                  />
-                  <div className={styles.tokenNameContainer}>
-                    <p className={styles.modalTokenSymbol}>{token.symbol}</p>
-                    <p className={styles.modalTokenName}>{token.name}</p>
-                  </div>
-                </div>
-
-                <div>
-                  <img src="/logos/send.png" className={styles.modalSendLogo} />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </Modal>
-
-      <button className="" onClick={() => toggleConfig()}>
-        Open Popup
-      </button>
-
-      <div>
-        hello
-      </div>
     </div>
   );
 };
