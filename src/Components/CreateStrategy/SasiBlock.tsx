@@ -51,7 +51,12 @@ const SasiBlock = ({sasiData}:Props) => {
           <div className={styles.colorsLayerStyles}>{sasiData.protocol}</div>
         </div>
         <div className={styles.frameDiv73}>
+          {sasiData.action == "Stake" ?
+          
           <div className={styles.vaultDiv}>Reward : {sasiData.selection1}</div>
+        :sasiData.action == "Harvest"?  <div className={styles.vaultDiv}>To : {sasiData.selection1}</div> :
+        <div className={styles.vaultDiv}>Reward : {sasiData.selection1}</div>
+        }
           <img
             className={styles.ellipseIcon4964}
             alt=""
@@ -59,8 +64,17 @@ const SasiBlock = ({sasiData}:Props) => {
           />
         </div>
         <div className={styles.frameDiv74}>
+          {sasiData.action == "Harvest"?
+          <>
           <div className={styles.vaultDiv}>Stake: {sasiData.selection2}</div>
           <img className={styles.groupIcon} alt="" src="group-1000002105.svg" />
+          </>
+          :<>
+          <div className={styles.vaultDiv}>Stake: {sasiData.selection2}</div>
+          <img className={styles.groupIcon} alt="" src="group-1000002105.svg" />
+          </>
+          }
+         
         </div>
       </div>
     </div>

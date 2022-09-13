@@ -17,7 +17,7 @@ export const CreateStrategy: FunctionComponent = () => {
   const onActionButtonClick = 
     (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       store.updateAction("" + (e.target as HTMLElement).textContent);
-      useSasiBlocks.setState({block:{id:sasiBlocks.length,action:"" + (e.target as HTMLElement).textContent,protocol:block.protocol,selection1:block.selection1,selection2:block.selection2}})
+      useSasiBlocks.setState({block:{id:sasiBlocks.length,action:"" + (e.target as HTMLElement).textContent?.replace("token",""),protocol:block.protocol,selection1:block.selection1,selection2:block.selection2}})
       navigate("/createVault");
     } 
   ;
