@@ -174,7 +174,8 @@
   margin-left: 8px;
 }
 .frameDiv70 {
-  position: absolute;
+  position: relative;
+  display: block;
   top: 224px;
   left: 416px;
   border-radius: 8px;
@@ -184,6 +185,7 @@
   font-size: 12px;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 .selectActionDiv {
   position: absolute;
@@ -389,8 +391,8 @@
   overflow: hidden;
 }
 .frameDiv75 {
-  position: absolute;
-  top: 352px;
+  position: relative;
+  top: 230px;
   left: 416px;
   border-radius: 4px;
   background-color: #202023;
@@ -420,11 +422,11 @@
 }
 .frameDiv83,
 .groupButton {
-  position: absolute;
+  position: relative;
   width: 608px;
 }
 .frameDiv83 {
-  top: 0;
+   
   left: 0;
   border-radius: 8px;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
@@ -440,7 +442,7 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-  top: 688px;
+  top: 275px;
   left: 416px;
   height: 56px;
 }

@@ -1,25 +1,29 @@
 import React, { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import SasiBlock from "./Components/CreateStrategy/SasiBlock";
 import styles from "./css/CreateStrategy.module.css";
 import useStore from "./store";
+import useSasiBlocks from './sasiBlockStore'
+ 
+
 
 export const CreateStrategy: FunctionComponent = () => {
   const navigate = useNavigate();
   const store = useStore();
-  // const onGroupButtonClick = useCallback(( e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-  //  console.log(e);
-  //   navigate("/createVault");
-  // }, [navigate]);
-  const onActionButtonClick = useCallback(
+  
+  const {sasiBlocks,block} = useSasiBlocks(); 
+  console.log(sasiBlocks)
+
+  const onActionButtonClick = 
     (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       store.updateAction("" + (e.target as HTMLElement).textContent);
+      useSasiBlocks.setState({block:{id:sasiBlocks.length,action:"" + (e.target as HTMLElement).textContent,protocol:block.protocol,selection1:block.selection1,selection2:block.selection2}})
       navigate("/createVault");
-    },
-    [navigate]
-  );
-  const inputDurationClick = useCallback(() => {
+    } 
+  ;
+  const inputDurationClick = () => {
     navigate("/inputDuration");
-  }, [navigate]);
+  };
 
   return (
     <div className={styles.dashboardDiv}>
@@ -5136,39 +5140,10 @@ export const CreateStrategy: FunctionComponent = () => {
           <img className={styles.ellipseIcon} alt="" />
         </div>
       </div>
-      <div className={styles.frameDiv70}>
-        <img
-          className={styles.trashCanOutlineIcon}
-          alt=""
-          src="trashcanoutline.svg"
-          onClick={inputDurationClick}
-        />
-        <img
-          className={styles.squareEditOutlineIcon}
-          alt=""
-          src="squareeditoutline.svg"
-          onClick={onActionButtonClick}
-        />
-        <div className={styles.frameDiv71}>
-          <div className={styles.colorsLayerStyles}>Stake</div>
-        </div>
-        <div className={styles.frameDiv72}>
-          <img className={styles.bgIcon} alt="" src="ellipse-8@2x.png" />
-          <div className={styles.colorsLayerStyles}>Pancakeswap</div>
-        </div>
-        <div className={styles.frameDiv73}>
-          <div className={styles.vaultDiv}>Reward : CAKE</div>
-          <img
-            className={styles.ellipseIcon4964}
-            alt=""
-            src="ellipse-8@2x.png"
-          />
-        </div>
-        <div className={styles.frameDiv74}>
-          <div className={styles.vaultDiv}>Stake: CAKE</div>
-          <img className={styles.groupIcon} alt="" src="group-1000002105.svg" />
-        </div>
-      </div>
+      {sasiBlocks.map((sasiData)=>
+        <SasiBlock sasiData={sasiData}/>
+      )}
+
       <div className={styles.frameDiv75}>
         <div className={styles.groupDiv}>
           <div className={styles.selectActionDiv}>Select Action</div>
