@@ -14,7 +14,7 @@ const useSasiBlocks = create<{
     addSasiBlock:(block:SasiBlockData)=>void;
     block:SasiBlockData;
 }>((set) => ({
-  sasiBlocks: [{id:0,action:"Stake",protocol:"PancakeSwap",selection1:"Cake",selection2:"Cake"}],
+  sasiBlocks: [],
   block:{id:0,action:"Stake",protocol:"PancakeSwap",selection1:"Cake",selection2:"Cake"},
   addSasiBlock: (block: SasiBlockData) =>
     set((state) => ({
