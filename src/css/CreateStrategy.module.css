@@ -90,6 +90,7 @@
 }
 .squareEditOutlineIcon {
   left: 568px;
+  cursor: pointer;
 }
 .colorsLayerStyles {
   position: relative;
@@ -186,6 +187,7 @@
   color: #fff;
   cursor: pointer;
   margin-bottom: 30px;
+
 }
 .selectActionDiv {
   position: absolute;
@@ -389,6 +391,7 @@
   width: 24px;
   height: 24px;
   overflow: hidden;
+  cursor: pointer;
 }
 .frameDiv75 {
   position: relative;
@@ -461,6 +464,7 @@
   width: 24px;
   height: 24px;
   overflow: hidden;
+  cursor: pointer;
 }
 .every2Days {
   color: #fff;
