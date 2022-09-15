@@ -1,8 +1,6 @@
 import React, { FunctionComponent,useCallback } from "react";
 import styles from "./css/StrategyCreated.module.css";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
-
 
 
 export const InputDuration: FunctionComponent = () => {

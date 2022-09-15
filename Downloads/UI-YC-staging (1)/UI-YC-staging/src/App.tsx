@@ -17,6 +17,8 @@ import { ProtocolList } from "./protocolList";
 import { InputAddress } from "./InputAddress";
 import { useEffect } from "react";
 import Header from "./Components/Layout/Header/Header";
+import { VerfiedVaultCard } from "./vaultcards";
+import VaultSection from "./vaultSection";
 
 function App() {
   const action = useNavigationType();
@@ -103,6 +105,8 @@ function App() {
         <Route path="/searchedProtocol" element={<SearchedProtocol />} />
 
         <Route path="/protocolList" element={<ProtocolList />} />
+
+        <Route path="/vault" element={<VaultSection />} />
 
         <Route path="/" element={<MainDashboard />} />
       </Routes>

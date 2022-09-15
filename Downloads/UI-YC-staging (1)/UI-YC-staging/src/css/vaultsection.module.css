@@ -1,0 +1,36 @@
+.vaultsection {
+  background: #050505;
+  height: 500vh;
+  color: #ffffff;
+  padding: 150px 20px;
+  font-family: "Athletics";
+}
+
+.flexDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 44px;
+}
+
+.arrows {
+    gap: 24px;
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+
+.trendingVault {
+    margin-top: 84px;
+}
