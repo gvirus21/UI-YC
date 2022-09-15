@@ -12,25 +12,41 @@ import { style } from "@mui/system";
 import SwapModal from "./SwapModal";
 
 const IntitalFromToken: IToken = {
-  "id": "bitcoin",
-  "name": "Bitcoin",
-  "symbol": "BTC",
-  "logo": "../logos/bitcoin.png"
-}
+  id: "bitcoin",
+  name: "Bitcoin",
+  symbol: "BTC",
+  logo: "../logos/bitcoin.png",
+  APY: "7.8",
+  prevAPY: "7.5",
+  tvl: "600",
+  network: "Solana",
+  networkLogo: "../logos/ethereum.png",
+  myDeposits: "5",
+  myEarnings: "0.2",
+  website: "app.uniswap.org",
+};
 
 const IntitalToToken: IToken = {
-  "id": "ethereum",
-  "name": "Ethereum",
-  "symbol": "ETH",
-  "logo": "../logos/ethereum.png"
-}
+  id: "ethereum",
+  name: "Ethereum",
+  symbol: "ETH",
+  logo: "../logos/ethereum.png",
+  APY: "7.3",
+  prevAPY: "7.0",
+  tvl: "400",
+  network: "Ethereum",
+  networkLogo: "../logos/ethereum.png",
+  myDeposits: "10",
+  myEarnings: "2",
+  website: "app.uniswap.org",
+};
 
 const SwapAction = () => {
   const [fromToken, setFromToken] = useState<IToken | null>(IntitalFromToken);
   const [toToken, setToToken] = useState<IToken | null>(IntitalToToken);
   const [filteredTokens, setFilteredTokens] = useState<IToken[]>(Tokens);
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-  const [modalAction, setModalAction] = useState<"to" | "from">('from')
+  const [modalAction, setModalAction] = useState<"to" | "from">("from");
 
   const navigate = useNavigate();
 
@@ -46,13 +62,13 @@ const SwapAction = () => {
   const selectFromTokenAction = (id: string) => {
     const selectedToken = filteredTokens.find((token) => token.id === id);
     selectedToken && setFromToken(selectedToken);
-    toggleModal()
+    toggleModal();
   };
 
   const selectToTokenAction = (id: string) => {
     const selectedToken = filteredTokens.find((token) => token.id === id);
     selectedToken && setToToken(selectedToken);
-    toggleModal()
+    toggleModal();
   };
 
   const handleSearch = (e: any) => {
@@ -70,38 +86,47 @@ const SwapAction = () => {
   };
 
   const handleSelect = (tokenId: string) => {
-    if (modalAction === 'from') {
-      selectFromTokenAction(tokenId)
-    } else if (modalAction==='to') {
-      selectToTokenAction(tokenId)
+    if (modalAction === "from") {
+      selectFromTokenAction(tokenId);
+    } else if (modalAction === "to") {
+      selectToTokenAction(tokenId);
     }
-  } 
-
-  
+  };
 
   return (
     <div>
       <SwapModal
-        modalAction={modalAction} 
-        modalIsOpen={modalIsOpen} 
-        setModalIsOpen={setModalIsOpen} 
-        filteredTokens={filteredTokens} 
-        toggleModal={toggleModal} 
-        handleSearch={handleSearch} 
-        handleSelect={handleSelect} 
+        modalAction={modalAction}
+        modalIsOpen={modalIsOpen}
+        setModalIsOpen={setModalIsOpen}
+        filteredTokens={filteredTokens}
+        toggleModal={toggleModal}
+        handleSearch={handleSearch}
+        handleSelect={handleSelect}
       />
 
-          <div className={styles.SwapTokenSelectonContainer}>
-            <h3 className={styles.swapHeadingText} >Swap from</h3>
-            <SwapFromTokenSelection selectedFromToken={fromToken} toggleModal={toggleModal} setModalAction={setModalAction} />
+      <div className={styles.SwapTokenSelectonContainer}>
+        <h3 className={styles.swapHeadingText}>Swap from</h3>
+        <SwapFromTokenSelection
+          selectedFromToken={fromToken}
+          toggleModal={toggleModal}
+          setModalAction={setModalAction}
+        />
 
-            {/* swap icon */}
-            <img src='/logos/swap.png' alt='swap-icon' className={styles.swapIcon} />
+        {/* swap icon */}
+        <img
+          src="/logos/swap.png"
+          alt="swap-icon"
+          className={styles.swapIcon}
+        />
 
-            <h3 className={styles.swapHeadingText} >Swap to</h3>
-            <SwapToTokenSelection selectedToToken={toToken} toggleModal={toggleModal} setModalAction={setModalAction} />
-          </div>
-
+        <h3 className={styles.swapHeadingText}>Swap to</h3>
+        <SwapToTokenSelection
+          selectedToToken={toToken}
+          toggleModal={toggleModal}
+          setModalAction={setModalAction}
+        />
+      </div>
     </div>
   );
 };

@@ -2299,3 +2299,134 @@ ul {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+/* table styling */
+
+.tableTopHeading {
+  margin-top: 140rem;
+  margin-left: 4rem;
+}
+
+.tableHeadingRow {
+  display: flex;
+}
+
+.tableDepositeTitle {
+  margin-right: 2rem;
+  color: #676771;
+}
+
+.tableAPYTitle {
+  margin-right: 7rem;
+  color: #676771;
+}
+
+.tableTVLTitle {
+  margin-right: 8rem;
+  color: #676771;
+}
+
+.tableNetworkTitle {
+  margin-right: 6rem;
+  color: #676771;
+}
+
+.tableDepositsTitle {
+  margin-right: 3rem;
+  color: #676771;
+}
+
+.tableEarningsTitle {
+  margin-right: 6rem;
+  color: #676771;
+}
+
+.tableWebsiteTitle {
+  margin-right: 9rem;
+  color: #676771;
+}
+
+.tableActioneTitle {
+  color: #676771;
+}
+
+.tableImage {
+  margin-right: 1rem;
+  height: 2.5rem;
+}
+
+.tableText {
+  text-align: center;
+}
+
+.tableContainer {
+  padding: 2rem 4rem;
+}
+
+.tableRows {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.depositTokensContainer {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  margin-right: 3rem;
+}
+.apyContainer {
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.apyContainer h1 {
+  color: gray;
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  text-decoration: line-through;
+}
+
+.tvlContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.networkContainer {
+  display: flex;
+  align-items: center;
+  width: 12rem;
+  margin-right: 3rem;
+}
+
+.myDepositsContainer {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  margin-right: 3rem;
+}
+.myEarningsContainer {
+  display: flex;
+  align-items: center;
+  width: 7rem;
+  margin-right: 3rem;
+}
+
+.websiteContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.tableButton {
+  background-color: #fff;
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 10px;
+}
