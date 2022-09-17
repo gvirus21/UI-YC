@@ -7,7 +7,7 @@ interface Props {
 
 const DurationModal = ({ cancelModal }: Props) => {
   const [duration, setDuration] = useState({
-    figure: "",
+    figure: " ",
     time: "Days",
   });
 
