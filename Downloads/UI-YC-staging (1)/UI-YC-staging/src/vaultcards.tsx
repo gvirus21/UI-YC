@@ -1,6 +1,11 @@
 import styles from "./css/vaultcards.module.css";
 
 export const VerfiedVaultCard = () => {
+  const handleCopy = () => {
+    navigator.clipboard.writeText(" app.uniswap.org");
+    alert("Copied")
+
+  }
   return (
     <div className={styles.vaultCard}>
       <div className={styles.apyvalues}>
@@ -30,8 +35,11 @@ export const VerfiedVaultCard = () => {
           </li>
           <li className={styles.cardlist}>
             <span className={styles.key}>Website</span>
-            <span className={styles.value}>
-              app.uniswap.org <img src="copy.png" />
+            <span
+              className={styles.value}
+              onClick={handleCopy}
+            >
+              app.uniswap.org <img src="copy.png" className={styles.copyImg} />
             </span>
           </li>
           <li className={styles.cardlist}>
@@ -47,6 +55,10 @@ export const VerfiedVaultCard = () => {
 
 
 export const TrendingVaultCard = () => {
+  const handleCopy = () => {
+    navigator.clipboard.writeText(" app.uniswap.org");
+    alert("Copied");
+  };
   return (
     <div className={styles.trendingvault}>
       <div className={styles.trendingvaultapys}>
@@ -79,8 +91,9 @@ export const TrendingVaultCard = () => {
             </li>
             <li className={styles.cardlist}>
               <span className={styles.key}>Website</span>
-              <span className={styles.value}>
-                app.uniswap.org <img src="copy.png" />
+              <span className={styles.value} onClick={handleCopy}>
+                app.uniswap.org{" "}
+                <img src="copy.png" className={styles.copyImg} />
               </span>
             </li>
             <li className={styles.cardlist}>

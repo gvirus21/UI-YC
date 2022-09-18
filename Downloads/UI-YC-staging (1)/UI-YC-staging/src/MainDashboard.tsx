@@ -3,7 +3,6 @@ import { SearchBoxComponent } from "./SearchBoxComponent";
 import { TextArea } from "./TextArea";
 import styles from "./css/MainDashboard.module.css";
 import { useNavigate } from "react-router-dom";
-import VaultSection from "./vaultSection";
 
 
 export const MainDashboard: FunctionComponent = () => {

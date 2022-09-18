@@ -1,5 +1,4 @@
 .vaultCard {
-  width: 304px;
   color: #ffffff;
   font-family: "Athletics";
 }
@@ -206,8 +205,12 @@
 
 .trendingNetwork {
   font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-color: #676771;
-margin-bottom: -8px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #676771;
+  margin-bottom: -8px;
+}
+
+.copyImg {
+  cursor: pointer;
 }
