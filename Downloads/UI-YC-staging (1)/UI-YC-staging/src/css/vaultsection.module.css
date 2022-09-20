@@ -83,6 +83,18 @@
   display: flex;
 }
 
+.arrowLeft {
+  background:  #202023;
+  border-radius: 32px;
+  padding: 13.34px 16.33px;
+}
+
+.arrowRight {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 13.34px 16.33px;
+}
+
 .cards {
   display: flex;
   gap: 32px;

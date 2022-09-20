@@ -5,8 +5,8 @@ const HeroSection = () => {
   const [showNetworks, setShowNetworks] = useState(false);
 
   const openNetworks = () => {
-    setShowNetworks(!showNetworks)
-  }
+    setShowNetworks(!showNetworks);
+  };
   return (
     <div className={styles.herosection}>
       <div className={styles.title}>Strategy Vaults</div>
@@ -63,8 +63,10 @@ const HeroSection = () => {
         </div>
         <div className={styles.flexDiv2}>
           <div className={styles.flexDiv3}>
-            <div className={styles.vaultDiv}>My Vaults only</div>
-            <div>Toggle</div>
+            <div className={styles.toggle}>
+              <div className={styles.vaultDiv}>My Vaults only</div>
+              <input type="checkbox" id="temp" />
+            </div>
           </div>
           <div className={styles.filterBox}>
             Filter <div>2</div>

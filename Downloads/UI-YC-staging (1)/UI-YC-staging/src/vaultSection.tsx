@@ -38,8 +38,8 @@ const VaultSection = () => {
       <div className={styles.flexDiv}>
         <div className={styles.title}>Verified Vaults</div>
         <div className={styles.arrows}>
-          <img className={styles.arrowLeft} alt="" src="arrowLeft.png" />
-          <img className={styles.arrowRight} alt="" src="arrowRight.png" />
+          <img className={styles.arrowLeft} alt="" src="Vector (13).png" />
+          <img className={styles.arrowRight} alt="" src="Vector (12).png" />
         </div>
       </div>
       <div className={styles.cards}>
