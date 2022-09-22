@@ -22,6 +22,7 @@
     },
     "include": [
       "src"
-, "Components/Layout/Header/AccountDropdown.tsx", "Components/Layout/Header/NetworkDropdown.tsx", "Components/Layout/Header.tsx"    ]
+, "Components/Layout/Header/AccountDropdown.tsx", "Components/Layout/Header/NetworkDropdown.tsx", "Components/Layout/Header.tsx"    
+, "../yc/fetchABI.js"    ]
   }
   
