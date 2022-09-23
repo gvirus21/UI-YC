@@ -18,7 +18,7 @@ const TableCell = styled(BaseTableCell)({
   fontFamily: "Athletics",
   fontweight: 700,
   fontSize: "16px",
-  lineHeight: "24px",
+  lineHeight: "24px"
 });
 
 const VaultsTable = () => {

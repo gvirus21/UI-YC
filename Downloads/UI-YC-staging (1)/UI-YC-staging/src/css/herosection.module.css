@@ -126,45 +126,46 @@
   gap: 8px;
 }
 
-.toggle {
-  display: flex;
+.vaultDiv {
+  font-family: "Athletics";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
 }
 
-.toggle input[type="checkbox"]{
-    display: none;
-  }
+.toggle {
+  position: relative;
+}
 
- .toggle input[type="checkbox"] + .vaultDiv::before{
-    content: ' ';
-    display: block;
-    height: 18px;
-    width: 45px;
-    border: 1px solid  #2D2D31;
-    border-radius: 9px;
-    position: absolute;
-    top: 0px;
-    left: -65px;
-    background:  #2D2D31;
-  }
-  
-  input[type="checkbox"] + .vaultDiv::after{
-    content: ' ';
-    display: block;
-    height: 30px;
-    width: 30px;
-    border: 1px solid #222226;   
-    border-radius: 50%;
-    position: absolute;
-    top: -6px;
-    left: -75px;
-    background: #222226;
-    transition: all 0.3s ease-in;
-  }
-  
-  input[type="checkbox"]:checked + .vaultDiv::after{
-    left: -40px; 
-    transition: all 0.3s ease-in;
-  }
+.floor {
+  background: #313133;
+  border-radius: 7px;
+  width: 24px;
+  height: 9.8px;
+}
+
+.thumb {
+  background: #222226;
+  width: 14.12px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slidethumb {
+  background: #222226;
+  width: 14.12px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .filterBox {
   border: 1px solid #2d2d31;
@@ -182,13 +183,4 @@
   background: linear-gradient(90deg, #00b2ec 0%, #d9ca0f 100%);
   border-radius: 50%;
   padding: 5px 10px;
-}
-
-.vaultDiv {
-  font-family: "Athletics";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ffffff;
-  position: relative;
 }

@@ -3,9 +3,14 @@ import styles from "./css/herosection.module.css";
 
 const HeroSection = () => {
   const [showNetworks, setShowNetworks] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const openNetworks = () => {
     setShowNetworks(!showNetworks);
+  };
+
+  const switchToggle = () => {
+    setToggle(!toggle);
   };
   return (
     <div className={styles.herosection}>
@@ -63,9 +68,13 @@ const HeroSection = () => {
         </div>
         <div className={styles.flexDiv2}>
           <div className={styles.flexDiv3}>
+            <div className={styles.vaultDiv}>My Vaults only</div>
             <div className={styles.toggle}>
-              <div className={styles.vaultDiv}>My Vaults only</div>
-              <input type="checkbox" id="temp" />
+              <div className={styles.floor}></div>
+              <div
+                className={` ${toggle ? styles.slidethumb : styles.thumb} `}
+                onClick={switchToggle}
+              ></div>
             </div>
           </div>
           <div className={styles.filterBox}>
