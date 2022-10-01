@@ -4,24 +4,36 @@ import { useNavigate } from "react-router-dom";
 import ActionInput from "./Components/CreateVault/ActionInput";
 import useStore from "./store";
 import StakeAction from "./Components/CreateVault/Stake/StakeAction";
+import useSasiBlocks from "./sasiBlockStore";
 
 export const CreateVault: FunctionComponent = () => {
+  const {block,sasiBlocks, addSasiBlock} = useSasiBlocks(); 
   const navigate = useNavigate();
   const store = useStore();
   const [actionSelected, setActionSelected]= useState(store.vaultAction);
+  // need to come up with the list object here
+   
 
   useEffect(()=>{
+    useSasiBlocks.setState({block:{id:block.id,action:block.action,protocol:"PancakeSwap",selection1:block.selection1,selection2:"Cake"}})
     setActionSelected(store.vaultAction);
     console.log(actionSelected+'we')
   },[])
 
-  const onCancelActionClick = useCallback(() => {
+  const onCancelActionClick = () => {
     navigate("/createStrategy");
-  }, [navigate]);
-  const onDoneClick = useCallback(() => {
+  };
+  const onDoneClick = () => {
+    //add to list the new block and reset the block adn make sure it has the right id based on length of current list 
+    //update id
+    //useSasiBlocks.setState({block:{id:sasiBlocks.length,action:store.vaultAction,protocol:block.protocol,selection1:block.selection1,selection2:block.selection2}})
+    addSasiBlock(block);
+    console.log(block);
+    console.log(sasiBlocks);
+
     navigate("/createStrategy");
-  }, [navigate]);
-  
+  };
+
   return (
     <div className={styles.dashboardDiv}>
        
