@@ -175,12 +175,7 @@
   margin-left: 8px;
 }
 .frameDiv70 {
-<<<<<<< HEAD
   position: absolute;
-=======
-  position: relative;
-  display: block;
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
   top: 224px;
   left: 416px;
   border-radius: 8px;
@@ -189,12 +184,6 @@
   height: 96px;
   font-size: 12px;
   color: #fff;
-<<<<<<< HEAD
-=======
-  cursor: pointer;
-  margin-bottom: 30px;
-
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
 }
 .selectActionDiv {
   position: absolute;
@@ -401,13 +390,8 @@
   cursor: pointer;
 }
 .frameDiv75 {
-<<<<<<< HEAD
   position: absolute;
   top: 352px;
-=======
-  position: relative;
-  top: 230px;
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
   left: 416px;
   border-radius: 4px;
   background-color: #202023;
@@ -437,19 +421,11 @@
 }
 .frameDiv83,
 .groupButton {
-<<<<<<< HEAD
   position: absolute;
   width: 608px;
 }
 .frameDiv83 {
   top: 0;
-=======
-  position: relative;
-  width: 608px;
-}
-.frameDiv83 {
-   
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
   left: 0;
   border-radius: 8px;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
@@ -465,11 +441,7 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-<<<<<<< HEAD
   top: 688px;
-=======
-  top: 275px;
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
   left: 416px;
   height: 56px;
 }
