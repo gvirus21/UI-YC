@@ -266,6 +266,7 @@
   line-height: 24px;
   display: inline-block;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+    background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

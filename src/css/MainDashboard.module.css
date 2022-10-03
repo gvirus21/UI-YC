@@ -1920,6 +1920,7 @@ a {
   line-height: 24px;
   display: flex;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor:pointer;
@@ -2063,7 +2064,6 @@ details[open] summary:before {
 summary:after {
   content: '';
   display: inline-block;
-  float: right;
   width: .5rem;
   height: .5rem;
   border-bottom: 1px solid currentColor;
