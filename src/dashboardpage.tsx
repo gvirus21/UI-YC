@@ -8,7 +8,7 @@ const DashBoardPage = () => {
     <div className={styles.dashboardpage}>
       <HeroSection />
       <VaultSection />
-      <VaultsTable/>
+      <VaultsTable />
     </div>
   );
 };
