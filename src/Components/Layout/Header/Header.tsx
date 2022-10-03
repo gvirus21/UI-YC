@@ -25,7 +25,8 @@ const Header: FunctionComponent = () => {
           <NavLink
             style={{ textDecoration: "none" }}
             to="/"
-            className={({ isActive }) => isActive ? styles.vaultB : styles.vault
+            className={({ isActive }) =>
+              isActive ? styles.vaultB : styles.vault
             }
           >
             Vault

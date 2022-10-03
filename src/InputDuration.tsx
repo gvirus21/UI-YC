@@ -1,6 +1,11 @@
 import React, { FunctionComponent,useCallback } from "react";
 import styles from "./css/StrategyCreated.module.css";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import { Button } from "@mui/material";
+
+>>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
 
 
 export const InputDuration: FunctionComponent = () => {
@@ -104,6 +109,7 @@ export const InputDuration: FunctionComponent = () => {
       <div className={styles.cantFindPoolAggregateIn2}>
         Cant find pool, Aggregate in 2min
       </div>
+<<<<<<< HEAD
       <img
         className={styles.yieldchainLogo1}
         alt=""
@@ -157,6 +163,12 @@ export const InputDuration: FunctionComponent = () => {
           <div className={styles.etherumDiv}>Stake YC</div>
         </div>
       </div>
+=======
+
+
+
+      
+>>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
       <img className={styles.dimmerIcon} alt="" src="dimmer.svg" />
       <div className={styles.fREDialog}>
         <div className={styles.groupDiv18}>
