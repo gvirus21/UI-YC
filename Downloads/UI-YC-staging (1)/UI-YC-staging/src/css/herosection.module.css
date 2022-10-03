@@ -1,7 +1,5 @@
 .herosection {
- background-image: url(../../public/ellipse-15.svg);
- object-fit: cover;
- background-repeat: no-repeat;
+  background: linear-gradient(90deg, #00b2ec 0%, #d9ca0f 100%);
   display: flex;
   flex-direction: column;
   padding: 96px 64px 100px;
