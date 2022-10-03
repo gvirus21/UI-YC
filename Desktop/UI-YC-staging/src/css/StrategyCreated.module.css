@@ -1,0 +1,560 @@
+.vaultDiv {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+}
+.arrowChevronDuoRight {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.createVaultB {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  color: #fff;
+}
+.frameDiv {
+  position: absolute;
+  top: 136px;
+  left: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv > * + * {
+  margin-left: 8px;
+}
+.icon24cursor {
+  position: absolute;
+  top: 352px;
+  left: 560px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: none;
+}
+.rectangleDiv,
+.rectangleDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.rectangleDiv {
+  background-color: #050505;
+  border-top: 0 solid #050505;
+  border-right: 1px solid #050505;
+  border-bottom: 0 solid #050505;
+  border-left: 0 solid #050505;
+  width: 1440px;
+  height: 1322px;
+}
+.rectangleDiv1 {
+  width: 100%;
+  right: 0;
+  border-radius: 4px;
+  background-color: #2d2d31;
+  border: 1px solid #2d2d31;
+  height: 56px;
+}
+.chevronDownIcon {
+  position: absolute;
+  top: 72px;
+  left: 544px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  display: none;
+}
+.stakeDiv {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.groupDiv3 {
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 56px;
+}
+.actionDiv,
+.groupDiv2,
+.groupDiv3 {
+  position: absolute;
+  left: 0;
+}
+.groupDiv2 {
+  width: 100%;
+  top: 32px;
+  right: 0;
+  height: 56px;
+}
+.actionDiv {
+  top: 0;
+  line-height: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+}
+.groupDiv1 {
+  position: absolute;
+  width: 92.11%;
+  top: 24px;
+  right: 3.95%;
+  left: 3.95%;
+  height: 88px;
+  text-align: center;
+}
+.chevronDownIcon1,
+.ellipseIcon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+.chevronDownIcon1 {
+  top: 176px;
+  left: 544px;
+  overflow: hidden;
+  display: none;
+}
+.ellipseIcon {
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.pancakeswapDiv {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.groupDiv7 {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 115px;
+  height: 24px;
+}
+.protocolDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+}
+.groupDiv4 {
+  position: absolute;
+  width: 92.11%;
+  top: 128px;
+  right: 3.95%;
+  left: 3.95%;
+  height: 88px;
+}
+.chevronDownIcon2 {
+  position: absolute;
+  top: 288px;
+  left: 544px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  display: none;
+}
+.groupDiv11 {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 133px;
+  height: 24px;
+}
+.groupDiv8,
+.rectangleDiv4 {
+  position: absolute;
+  width: 92.11%;
+  top: 240px;
+  right: 3.95%;
+  left: 3.95%;
+  height: 88px;
+}
+.rectangleDiv4 {
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-radius: 4px;
+  background-color: #050505;
+  border: 1px solid #2d2d31;
+  box-sizing: border-box;
+  height: 56px;
+}
+.chevronDownIcon3 {
+  position: absolute;
+  top: 16px;
+  left: 520px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.groupDiv12 {
+  position: absolute;
+  width: 92.11%;
+  top: 352px;
+  right: 3.95%;
+  left: 3.95%;
+  height: 88px;
+}
+.createStrategyDiv {
+  position: relative;
+  line-height: 24px;
+  font-weight: 900;
+  display: inline-block;
+  opacity: 0.8;
+}
+.frameDiv2,
+.frameDiv3 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv2 {
+  position: absolute;
+  top: 472px;
+  left: 24px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  flex-direction: column;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  color: #050505;
+}
+.frameDiv1 {
+  position: absolute;
+  top: 40px;
+  left: 418px;
+  border-radius: 4px;
+  background-color: #202023;
+  width: 608px;
+  height: 552px;
+}
+.groupDiv {
+  position: absolute;
+  top: 184px;
+  left: 0;
+  width: 1440px;
+  height: 1322px;
+}
+.cantFindPoolAggregateIn2 {
+  position: absolute;
+  top: 982px;
+  left: 517px;
+  font-size: 12px;
+  font-family: Inter;
+  color: #050505;
+  display: inline-block;
+}
+.ellipseIcon2,
+.yieldchainLogo1 {
+  position: absolute;
+  top: 44px;
+  left: 64px;
+  width: 164.83px;
+  height: 32px;
+  object-fit: cover;
+}
+.ellipseIcon2 {
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+}
+.iD65FG646Div,
+.metamaskDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  display: inline-block;
+}
+.iD65FG646Div {
+  top: 24px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+.groupDiv16 {
+  position: absolute;
+  top: 0;
+  left: 48px;
+  width: 74px;
+  height: 40px;
+}
+.chevronDownIcon4 {
+  position: absolute;
+  top: 10px;
+  left: 138px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.groupDiv15 {
+  position: absolute;
+  top: 40px;
+  left: 1031px;
+  width: 158px;
+  height: 40px;
+  text-align: right;
+  font-size: 16px;
+  color: #fff;
+}
+.simpleIconslitecoin {
+  position: relative;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+  object-fit: cover;
+}
+.etherumDiv {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.frameDiv5 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameDiv5 > * + * {
+  margin-left: 8px;
+}
+.chevronDownIcon5 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.frameDiv4 {
+  position: absolute;
+  top: 40px;
+  left: 876px;
+  border-radius: 4px;
+  border: 1px solid #2d2d31;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.frameDiv4 > * + * {
+  margin-left: 8px;
+}
+.frameDiv6,
+.vaultB {
+  background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+}
+.frameDiv6 {
+  position: absolute;
+  top: 40px;
+  left: 1213px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 40px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #050505;
+}
+.vaultB {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.frameDiv9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.portfolioDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.groupDiv17 {
+  position: relative;
+  width: 65px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frameDiv10,
+.frameDiv8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frameDiv8 {
+  position: absolute;
+  top: 48px;
+  left: 528px;
+  text-align: center;
+  font-size: 16px;
+}
+.frameDiv8 > * + * {
+  margin-left: 24px;
+}
+.dimmerIcon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.masterButtonTextMediu,
+.masterButtonTextMediu1 {
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.masterButtonTextMediu {
+  left: 103px;
+  background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.masterButtonTextMediu1 {
+  left: 0;
+  background-color: #2d2d31;
+  text-align: center;
+  color: #fff;
+  font-family: Aktiv Grotesk Corp;
+}
+.groupDiv18 {
+  position: absolute;
+  top: 376px;
+  left: 56px;
+  width: 234px;
+  height: 40px;
+  color: #050505;
+}
+.StrategyCreatedSuccessfully,
+.yourStrategyHasBeenCreated {
+  position: absolute;
+  left: 56px;
+  font-family: Aktiv Grotesk Corp;
+  display: inline-block;
+}
+.StrategyCreatedSuccessfully {
+  top: 56px;
+  font-size: 24px;
+  line-height: 32px;
+  width: 283px;
+}
+.yourStrategyHasBeenCreated {
+  top: 136px;
+  line-height: 24px;
+  color: #676771;
+  width: 354px;
+}
+.frameIcon {
+  position: absolute;
+  top: 0;
+  left: 450px;
+  width: 450px;
+  height: 530px;
+  overflow: hidden;
+}
+.groupDiv20 {
+  position: absolute;
+  width: 63.84%;
+  top: 32px;
+  right: 36.16%;
+  left: 0;
+  height: 56px;
+  color: #676771;
+}
+.chevronDownIcon6 {
+  position: absolute;
+  top: 16px;
+  left: 80px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.groupDiv22 {
+  position: absolute;
+  width: 33.9%;
+  top: 32px;
+  right: 0;
+  left: 66.1%;
+  height: 56px;
+}
+.fREDialog,
+.groupDiv19 {
+  position: absolute;
+  width: 39.33%;
+  top: 248px;
+  right: 54.44%;
+  left: 6.22%;
+  height: 88px;
+}
+.fREDialog {
+  height: 52.44%;
+  width: 62.5%;
+  top: 26.89%;
+  right: 18.75%;
+  bottom: 20.67%;
+  left: 18.75%;
+  border-radius: 8px;
+  background-color: #202023;
+  overflow: hidden;
+  color: #fff;
+}
+.StrategyCreatedDiv {
+  position: flex;
+  background-color: #050505;
+  border: 1px solid #050505;
+  box-sizing: border-box;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  color: #676771;
+  font-family: Athletics;
+}

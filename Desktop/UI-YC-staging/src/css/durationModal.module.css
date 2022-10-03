@@ -1,0 +1,176 @@
+.wrapper {
+  background-color: rgba(21, 21, 22, 0.75);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.modalDiv {
+  display: flex;
+  z-index: 1010;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.frameDiv1 {
+  background: #202023;
+  padding: 56px;
+  width: 50%;
+}
+
+.frameDiv2 {
+  background: #2d2d31;
+  width: 50%;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  left: 75.94px;
+  top: 90.47px;
+}
+
+.modalTitle {
+  font-family: "Aktiv Grotesk Corp";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.modalSubtitle {
+  font-family: "Aktiv Grotesk Corp";
+  color: #676771;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.inputTitle {
+  font-family: "Athletics";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 40px 0 8px;
+}
+
+.inputGrp {
+  display: flex;
+  gap: 8px;
+}
+
+.durationInput {
+  background: #050505;
+  border: 1px solid #2d2d31;
+  border-radius: 4px;
+  padding: 16px;
+  font-family: "Athletics";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  caret-color: #ffffff;
+  color: #ffffff;
+}
+
+.durationInput::-webkit-outer-spin-button,
+.durationInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.durationInput[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.durationInput::placeholder {
+  color: #676771;
+  font-family: "Athletics";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.durationInput:active,
+.durationInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.durationDropdown {
+  border: 1px solid #2d2d31;
+  width: 120px;
+  background: #2d2d31 url("../../public/arrow-down.png") 96% / 15% no-repeat;
+  background-position: right 20px center;
+  background-size: 12px;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 16px;
+  font-family: "Athletics";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.durationDropdownSelected:hover {
+  background: tan;
+}
+
+.durationDropdown::-ms-expand {
+  display: none;
+}
+
+.durationDropdown:active,
+.durationDropdown:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btns {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.cancelBtn {
+  background: #2d2d31;
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: none;
+  color: #ffffff;
+  font-family: Aktiv Grotesk Corp;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.saveBtn {
+  padding: 8px 20px;
+  border: none;
+  color: #050505;
+  font-family: Athletics;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.8;
+  background: linear-gradient(90deg, #00b2ec 0%, #d9ca0f 100%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+}
