@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { FunctionComponent, useCallback } from "react";
-=======
 import React, { FunctionComponent,useCallback } from "react";
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
 import styles from "./css/ProtocolList.module.css";
 import { useNavigate } from "react-router-dom";
 

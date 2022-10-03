@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-import React, { FunctionComponent, useCallback, useEffect } from "react";
-import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import styles from "./css/InputAddress.module.css";
-=======
+
 import React, { FunctionComponent, useCallback, useEffect,useState } from "react";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/InputAddress.module.css";
 import { getAbi } from "./fetchABI";
 
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
 
 export const InputAddress: FunctionComponent = () => {
+    const [searchVar, setSearchVar] = useState("");
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
@@ -23,11 +18,7 @@ export const InputAddress: FunctionComponent = () => {
     navigate("/main-dashboard");
   }, [navigate]);
 
-<<<<<<< HEAD
-=======
-  const [searchVar,setSearchVar] = useState("");
 
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -58,15 +49,12 @@ export const InputAddress: FunctionComponent = () => {
     };
   }, []);
 
-<<<<<<< HEAD
-=======
+
   useEffect(() => {  
     console.log(searchVar);
     getAbi(searchVar);
 },[searchVar]);
 
-
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
   return (
     <div className={styles.dashboardDiv}>
       <img className={styles.ellipseIcon} alt="" src="ellipse-151.svg" />
@@ -74,14 +62,10 @@ export const InputAddress: FunctionComponent = () => {
       <img className={styles.icon24cursor} alt="" src="icon24cursor7.svg" />
       <button
         className={styles.button}
-<<<<<<< HEAD
-        onClick={onButtonClick}
-=======
         onClick={()=>{
           console.log(searchVar)
           onButtonClick()
         }}
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
         data-animate-on-scroll
       >
         <Button
@@ -107,16 +91,15 @@ export const InputAddress: FunctionComponent = () => {
         className={styles.groupInput}
         type="text"
         placeholder="Paste contract address"
-<<<<<<< HEAD
-      />
-=======
         value={searchVar}  
         onChange={(event)=> {setSearchVar(event.target.value)}}
         // (<ScriptTag isHydrating={true} type="text/javascript" src="some_script.js" />);
         // fetchABI.js
         />
+
+       
         {/* return */}
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
+
       <a className={styles.groupA} href="https://yieldchain.io/">
         <div className={styles.backDiv}>Back</div>
         <img className={styles.arrowRightIcon} alt="" src="arrowright.svg" />
@@ -173,8 +156,5 @@ export const InputAddress: FunctionComponent = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
 };

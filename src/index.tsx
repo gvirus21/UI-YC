@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -17,10 +13,6 @@ const theme = createTheme();
 
 ReactDOM.render(
   <BrowserRouter>
-<<<<<<< HEAD
-=======
-  
->>>>>>> a81c4ceecd0aaf830498622e8c61ab81cee3b5e2
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
