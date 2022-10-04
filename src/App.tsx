@@ -2,9 +2,7 @@ import {
   Routes,
   Route,
   useNavigationType,
-  useLocation,
-  Router,
-  BrowserRouter,
+  useLocation
 } from "react-router-dom";
 import { InputDuration } from "./InputDuration";
 import { CreateStrategy } from "./CreateStrategy";
