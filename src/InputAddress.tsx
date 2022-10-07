@@ -1,3 +1,4 @@
+
 import React, { FunctionComponent, useCallback, useEffect,useState } from "react";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +7,7 @@ import { getAbi } from "./fetchABI";
 
 
 export const InputAddress: FunctionComponent = () => {
+    const [searchVar, setSearchVar] = useState("");
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
@@ -16,7 +18,6 @@ export const InputAddress: FunctionComponent = () => {
     navigate("/main-dashboard");
   }, [navigate]);
 
-  const [searchVar,setSearchVar] = useState("");
 
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
@@ -48,11 +49,11 @@ export const InputAddress: FunctionComponent = () => {
     };
   }, []);
 
+
   useEffect(() => {  
     console.log(searchVar);
     getAbi(searchVar);
 },[searchVar]);
-
 
   return (
     <div className={styles.dashboardDiv}>
@@ -95,7 +96,10 @@ export const InputAddress: FunctionComponent = () => {
         // (<ScriptTag isHydrating={true} type="text/javascript" src="some_script.js" />);
         // fetchABI.js
         />
+
+       
         {/* return */}
+
       <a className={styles.groupA} href="https://yieldchain.io/">
         <div className={styles.backDiv}>Back</div>
         <img className={styles.arrowRightIcon} alt="" src="arrowright.svg" />

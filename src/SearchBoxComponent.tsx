@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState } from "react";
 import styles from "./css/SearchBoxComponent.module.css";
 
 export const SearchBoxComponent: FunctionComponent = () => {
+
   const [searchVar,setSearchVar] = useState("");
  return (
   <input 
@@ -12,4 +13,5 @@ export const SearchBoxComponent: FunctionComponent = () => {
  onChange={(event)=> {setSearchVar(event.target.value)}}
  /> 
  );
+
 };

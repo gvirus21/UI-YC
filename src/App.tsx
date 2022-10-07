@@ -2,12 +2,11 @@ import {
   Routes,
   Route,
   useNavigationType,
-  useLocation,
-  Router,
-  BrowserRouter,
+  useLocation
 } from "react-router-dom";
 import { InputDuration } from "./InputDuration";
 import { CreateStrategy } from "./CreateStrategy";
+import { ConfirmStrategy } from "./ConfirmStrategy";
 import { CreateVault } from "./CreateVault";
 import { MainDashboard } from "./MainDashboard";
 import { Protocols } from "./Protocols";
@@ -16,6 +15,8 @@ import { ProtocolList } from "./protocolList";
 import { InputAddress } from "./InputAddress";
 import { useEffect } from "react";
 import Header from "./Components/Layout/Header/Header";
+import VaultSection from "./vaultSection";
+import DashBoardPage from "./dashboardpage";
 
 function App() {
   const action = useNavigationType();
@@ -83,28 +84,32 @@ function App() {
   }, [pathname]);
 
   return (
-     <div>
-     <Header/>
-      
-    <Routes>
-      
-      <Route path="/inputDuration" element={<InputDuration />} />
+    <div>
+      <Header />
 
-      <Route path="/createStrategy" element={<CreateStrategy />} />
+      <Routes>
+        <Route path="/inputDuration" element={<InputDuration />} />
 
-      <Route path="/createVault" element={<CreateVault />} />
+        <Route path="/createStrategy" element={<CreateStrategy />} />
 
-      <Route path="/inputAddress" element={<InputAddress />} />
+        <Route path="/confirmStrategy" element={<ConfirmStrategy />} />
 
-      <Route path="/protocols" element={<Protocols />} />
+        <Route path="/createVault" element={<CreateVault />} />
 
-      <Route path="/searchedProtocol" element={<SearchedProtocol />} />
+        <Route path="/inputAddress" element={<InputAddress />} />
 
-      <Route path="/protocolList" element={<ProtocolList />} />
+        <Route path="/protocols" element={<Protocols />} />
 
-      <Route path="/" element={<MainDashboard />} />
-    </Routes>
-  </div>
-   );
+        <Route path="/searchedProtocol" element={<SearchedProtocol />} />
+
+        <Route path="/protocolList" element={<ProtocolList />} />
+
+        <Route path="/vault" element={<VaultSection />} />
+
+        <Route path="/" element={<DashBoardPage />} />
+      </Routes>
+    </div>
+  );
 }
 export default App;
+

@@ -175,8 +175,7 @@
   margin-left: 8px;
 }
 .frameDiv70 {
-  position: relative;
-  display: block;
+  position: absolute;
   top: 224px;
   left: 416px;
   border-radius: 8px;
@@ -185,9 +184,6 @@
   height: 96px;
   font-size: 12px;
   color: #fff;
-  cursor: pointer;
-  margin-bottom: 30px;
-
 }
 .selectActionDiv {
   position: absolute;
@@ -250,7 +246,6 @@
   line-height: 18px;
   display: inline-block;
   width: max-content;
-  
 }
 .groupDiv2 {
   position: relative;
@@ -272,7 +267,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv3 {
   position: relative;
@@ -294,7 +288,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv4 {
   position: relative;
@@ -316,7 +309,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv5 {
   position: relative;
@@ -338,7 +330,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv6 {
   position: relative;
@@ -360,7 +351,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv7 {
   position: relative;
@@ -382,7 +372,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .closeIcon {
   position: absolute;
@@ -394,8 +383,8 @@
   cursor: pointer;
 }
 .frameDiv75 {
-  position: relative;
-  top: 230px;
+  position: absolute;
+  top: 352px;
   left: 416px;
   border-radius: 4px;
   background-color: #202023;
@@ -421,15 +410,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   cursor: pointer;
-
 }
 .frameDiv83,
 .groupButton {
-  position: relative;
+  position: absolute;
   width: 608px;
 }
 .frameDiv83 {
-   
+  top: 0;
   left: 0;
   border-radius: 8px;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
@@ -445,7 +433,7 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-  top: 275px;
+  top: 688px;
   left: 416px;
   height: 56px;
 }
@@ -586,6 +574,7 @@
   line-height: 24px;
   display: inline-block;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
