@@ -1,6 +1,10 @@
 import React, { FunctionComponent, useCallback, useRef, useState } from "react";
 import styles from "../../../css/CreateVault.module.css";
+import useSasiBlocks from "../../../sasiBlockStore";
+
 const DepositPoolDropDown: FunctionComponent = () => {
+  const {block} = useSasiBlocks(); 
+ 
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [network, setNetwork] = useState({
@@ -17,6 +21,7 @@ const DepositPoolDropDown: FunctionComponent = () => {
     let pool = "" + (e.target as HTMLElement).textContent;
     let updatedPool = pool.replace("/", "and");
     console.log(updatedPool);
+    useSasiBlocks.setState({block:{id:block.id,action:block.action,protocol:block.protocol,selection1:block.selection1,selection2:pool}})
     setNetwork({
       ...network,
       name: pool,

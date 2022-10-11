@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 
-
 export const InputDuration: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -106,10 +105,60 @@ export const InputDuration: FunctionComponent = () => {
       <div className={styles.cantFindPoolAggregateIn2}>
         Cant find pool, Aggregate in 2min
       </div>
+      <img
+        className={styles.yieldchainLogo1}
+        alt=""
+        src="yieldchain-logo-1@2x.png"
+      />
+      <div className={styles.groupDiv15}>
+        <img className={styles.ellipseIcon2} alt="" src="ellipse@2x.png" />
+        <div className={styles.groupDiv16}>
+          <div className={styles.metamaskDiv}>Metamask</div>
+          <div className={styles.iD65FG646Div}>ID65.....FG646</div>
+        </div>
+        <img
+          className={styles.chevronDownIcon4}
+          alt=""
+          src="chevrondown4.svg"
+        />
+      </div>
+      <div className={styles.frameDiv4}>
+        <div className={styles.frameDiv5}>
+          <img
+            className={styles.simpleIconslitecoin}
+            alt=""
+            src="simpleiconslitecoin@2x.png"
+          />
+          <div className={styles.etherumDiv}>Etherum</div>
+        </div>
+        <img
+          className={styles.chevronDownIcon5}
+          alt=""
+          src="chevrondown4.svg"
+        />
+      </div>
+      <div className={styles.frameDiv6}>
+        <div className={styles.frameDiv3}>
+          <div className={styles.createStrategyDiv}>Create Vault</div>
+        </div>
+      </div>
+      <div className={styles.frameDiv8}>
+        <div className={styles.frameDiv9}>
+          <b className={styles.vaultB}>Vault</b>
+        </div>
+        <div className={styles.frameDiv10}>
+          <div className={styles.groupDiv17}>
+            <div className={styles.portfolioDiv}>Portfolio</div>
+          </div>
+        </div>
+        <div className={styles.frameDiv10}>
+          <div className={styles.etherumDiv}>My Vault</div>
+        </div>
+        <div className={styles.frameDiv10}>
+          <div className={styles.etherumDiv}>Stake YC</div>
+        </div>
+      </div>
 
-
-
-      
       <img className={styles.dimmerIcon} alt="" src="dimmer.svg" />
       <div className={styles.fREDialog}>
         <div className={styles.groupDiv18}>

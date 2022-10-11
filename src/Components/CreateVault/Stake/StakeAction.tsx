@@ -6,23 +6,25 @@ import ProtocolDropdown from "./ProtocolDropDown";
 import DepositPoolDropDown from "./DepositPoolDropDown";
 
 
+
 const StakeAction = () => {
+  //need to declare variables that get updated base on the dropdown selection 
+  
 
 return(
 <div>
-<div className={styles.groupDiv3}>
-  <div className={styles.groupDiv1}>
-    <ProtocolDropdown/>
+  <div className={styles.groupDiv3}>
+    <div className={styles.groupDiv1}>
+      <ProtocolDropdown/>
+    </div>
+    <div className={styles.actionDiv}>Protocol 1</div>
   </div>
-  <div className={styles.actionDiv}>Protocol 1</div>
-</div>
-<div className={styles.groupDiv7}>
-  <div className={styles.groupDiv1}>
-    <DepositPoolDropDown/>
+  <div className={styles.groupDiv7}>
+    <div className={styles.groupDiv1}>
+      <DepositPoolDropDown/>
+    </div>
+    <div className={styles.actionDiv}>Deposit Pool</div>
   </div>
-  <div className={styles.actionDiv}>Deposit Pool</div>
-</div>
-
 </div>
 )
 }

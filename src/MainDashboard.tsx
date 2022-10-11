@@ -10,7 +10,7 @@ export const MainDashboard: FunctionComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <div   className={styles.mainDashboardDiv}>
+    <div className={styles.mainDashboardDiv}>
       <form
         className={styles.frameForm}
         action="https://yieldchain.io/"
@@ -58,7 +58,11 @@ export const MainDashboard: FunctionComponent = () => {
             <div className={styles.binanceSCDiv}>Binance SC</div>
           </div>
           <div className={styles.frameDiv3}>
-            <img className={styles.groupIcon} alt="" src="group-Avalanche.svg" />
+            <img
+              className={styles.groupIcon}
+              alt=""
+              src="group-Avalanche.svg"
+            />
             <div className={styles.binanceSCDiv}>Avalanche</div>
           </div>
           <div className={styles.frameDiv3}>
@@ -564,6 +568,7 @@ export const MainDashboard: FunctionComponent = () => {
       <h1 className={styles.tableTopHeading}>All Valuts</h1>
 
       <TokenTable />
+
     </div>
   );
 };

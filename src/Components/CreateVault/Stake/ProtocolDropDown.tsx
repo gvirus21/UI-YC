@@ -1,7 +1,9 @@
 import React, { FunctionComponent, useCallback, useRef, useState } from "react";
 import styles from "../../../css/CreateVault.module.css";
+import useSasiBlocks from "../../../sasiBlockStore";
 
 const ProtocolDropdown: FunctionComponent = () => {
+  const {block} = useSasiBlocks(); 
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [network, setNetwork] = useState({
@@ -15,11 +17,13 @@ const ProtocolDropdown: FunctionComponent = () => {
   const networkChangeHandler = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
+     
     setNetwork({
       ...network,
       name: "" + (e.target as HTMLElement).textContent,
       img: "group-" + (e.target as HTMLElement).textContent + ".svg",
     });
+    useSasiBlocks.setState({block:{id:block.id,action:block.action,protocol:"" + (e.target as HTMLElement).textContent,selection1:block.selection1,selection2:block.selection2}})
     setIsActive(!isActive);
   };
   return (

@@ -246,7 +246,6 @@
   line-height: 18px;
   display: inline-block;
   width: max-content;
-  
 }
 .groupDiv2 {
   position: relative;
@@ -268,7 +267,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv3 {
   position: relative;
@@ -290,7 +288,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv4 {
   position: relative;
@@ -312,7 +309,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv5 {
   position: relative;
@@ -334,7 +330,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv6 {
   position: relative;
@@ -356,7 +351,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .groupDiv7 {
   position: relative;
@@ -378,7 +372,6 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
-
 }
 .closeIcon {
   position: absolute;
@@ -417,7 +410,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   cursor: pointer;
-
 }
 .frameDiv83,
 .groupButton {
@@ -582,6 +574,7 @@
   line-height: 24px;
   display: inline-block;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

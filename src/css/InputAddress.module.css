@@ -127,7 +127,6 @@
   left: 66px;
   width: 164.83px;
   height: 32px;
-  background-image: url(../../public/yieldchain-logo-1@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -266,6 +265,7 @@
   line-height: 24px;
   display: inline-block;
   background: linear-gradient(90deg, #00b2ec, #d9ca0f);
+    background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

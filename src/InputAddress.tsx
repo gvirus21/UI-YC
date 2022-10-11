@@ -1,9 +1,13 @@
-import React, { FunctionComponent, useCallback, useEffect } from "react";
+
+import React, { FunctionComponent, useCallback, useEffect,useState } from "react";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/InputAddress.module.css";
+import { getAbi } from "./fetchABI";
+
 
 export const InputAddress: FunctionComponent = () => {
+    const [searchVar, setSearchVar] = useState("");
   const navigate = useNavigate();
 
   const onButtonClick = useCallback(() => {
@@ -13,6 +17,7 @@ export const InputAddress: FunctionComponent = () => {
   const onFrameButton1Click = useCallback(() => {
     navigate("/main-dashboard");
   }, [navigate]);
+
 
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
@@ -44,6 +49,12 @@ export const InputAddress: FunctionComponent = () => {
     };
   }, []);
 
+
+  useEffect(() => {  
+    console.log(searchVar);
+    getAbi(searchVar);
+},[searchVar]);
+
   return (
     <div className={styles.dashboardDiv}>
       <img className={styles.ellipseIcon} alt="" src="ellipse-151.svg" />
@@ -51,7 +62,10 @@ export const InputAddress: FunctionComponent = () => {
       <img className={styles.icon24cursor} alt="" src="icon24cursor7.svg" />
       <button
         className={styles.button}
-        onClick={onButtonClick}
+        onClick={()=>{
+          console.log(searchVar)
+          onButtonClick()
+        }}
         data-animate-on-scroll
       >
         <Button
@@ -77,7 +91,15 @@ export const InputAddress: FunctionComponent = () => {
         className={styles.groupInput}
         type="text"
         placeholder="Paste contract address"
-      />
+        value={searchVar}  
+        onChange={(event)=> {setSearchVar(event.target.value)}}
+        // (<ScriptTag isHydrating={true} type="text/javascript" src="some_script.js" />);
+        // fetchABI.js
+        />
+
+       
+        {/* return */}
+
       <a className={styles.groupA} href="https://yieldchain.io/">
         <div className={styles.backDiv}>Back</div>
         <img className={styles.arrowRightIcon} alt="" src="arrowright.svg" />
@@ -134,4 +156,5 @@ export const InputAddress: FunctionComponent = () => {
       </div>
     </div>
   );
+
 };
